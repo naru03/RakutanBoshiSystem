@@ -15,7 +15,7 @@ namespace RBS
             ApplicationConfiguration.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new question());
+            Application.Run(new Form1());
         }
     }
 }
