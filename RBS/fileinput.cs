@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace RBS;
 
-public partial class Form1 : Form
+public partial class fileinput : Form
 {
     String[,] Kamoku = new string[100, 11];
-    public Form1()
+    public fileinput()
     {
         InitializeComponent();
     }
