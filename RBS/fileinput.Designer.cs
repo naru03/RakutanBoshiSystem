@@ -1,6 +1,6 @@
 ﻿namespace RBS;
 
-partial class Form1
+partial class fileinput
 {
     /// <summary>
     ///  Required designer variable.
