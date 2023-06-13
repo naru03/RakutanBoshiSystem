@@ -32,7 +32,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
             // 
             // radioButton1
             // 
