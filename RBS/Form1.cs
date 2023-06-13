@@ -14,6 +14,7 @@ namespace RBS;
 
 public partial class Form1 : Form
 {
+    String[,] Kamoku = new string[100, 11];
     public Form1()
     {
         InitializeComponent();
@@ -43,7 +44,6 @@ public partial class Form1 : Form
         {
             try
             {
-                String[] Kamoku = new string[11];
                 var sr = new StreamReader(openFileDialog1.FileName);
                 textBox1.Text = openFileDialog1.FileName;
                 string htmlStr = sr.ReadToEnd();
@@ -55,11 +55,11 @@ public partial class Form1 : Form
                     int i = 0;
                     foreach (HtmlNode node in nodes)
                     {
-                        Kamoku[i % 11] = node.InnerText;
+                        Kamoku[i/11,i%11] = node.InnerText;
                         i++;
                         if (i % 11 == 0)
                         {
-                            dataGridView1.Rows.Add(Kamoku[0], Kamoku[1], Kamoku[2], Kamoku[3], Kamoku[4], Kamoku[5], Kamoku[6], Kamoku[7], Kamoku[8], Kamoku[9], Kamoku[10]);
+                            dataGridView1.Rows.Add(Kamoku[(i-1)/11,0], Kamoku[(i - 1) / 11, 1], Kamoku[(i - 1) / 11, 2], Kamoku[(i - 1) / 11, 3], Kamoku[(i - 1) / 11, 4], Kamoku[(i - 1) / 11, 5], Kamoku[(i - 1) / 11, 6], Kamoku[(i - 1) / 11, 7], Kamoku[(i - 1) / 11, 8], Kamoku[(i - 1) / 11, 9], Kamoku[(i - 1) / 11, 10]);
                         }
                     }
                 }
