@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Schema;
 
-namespace アンケート管理部
+namespace RBS
 {
     public partial class Question1 : UserControl
     {

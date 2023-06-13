@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace アンケート管理部
+namespace RBS
 {
-     class 成績管理
-    { 
+     class 成績管理:Form1
+    {
         
 
     }

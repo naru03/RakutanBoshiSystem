@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace アンケート管理部
+namespace RBS
 {
     public partial class Question3 : UserControl
     {

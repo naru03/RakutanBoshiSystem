@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace アンケート管理部
+namespace RBS
 {
     public partial class Question2 : UserControl
     {
-        public static int pattern2; 
+        public static int pattern2;
         public Question2()
         {
             InitializeComponent();
@@ -46,7 +46,12 @@ namespace アンケート管理部
         {
             question.ctr2.Visible = false;
             question.ctr1.Visible = true;
-           
+
+        }
+
+        private void Question2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
