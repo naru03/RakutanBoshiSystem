@@ -1,4 +1,4 @@
-﻿namespace アンケート管理部
+﻿namespace RBS
 {
     partial class question
     {

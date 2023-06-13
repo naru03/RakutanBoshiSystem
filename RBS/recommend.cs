@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace アンケート管理部
+namespace RBS
 {
     public partial class recommend : Form
     {

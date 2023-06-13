@@ -48,7 +48,6 @@ partial class fileinput
         title.Size = new Size(303, 35);
         title.TabIndex = 1;
         title.Text = "落単防止システム";
-        title.Click += title_Click;
         // 
         // button1
         // 
