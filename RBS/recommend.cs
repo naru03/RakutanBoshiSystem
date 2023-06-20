@@ -59,6 +59,7 @@ namespace RBS
             tannijogai();
             reccomend1(Question1.pattern1);
             reccomend2(Question2.pattern2);
+            reccomend3(Question3.pattern3);
             //reccomendbug();
 
             // 今取った単位数確認
@@ -77,11 +78,11 @@ namespace RBS
             dataGridView2.Columns[2].HeaderText = "単位数";
 
             //データを追加
-            dataGridView2.Rows.Add("1. " + sibori2[0, 0], sibori2[0, 3], sibori2[0, 4]);
-            dataGridView2.Rows.Add("2. " + sibori2[1, 0], sibori2[1, 3], sibori2[1, 4]);
-            dataGridView2.Rows.Add("3. " + sibori2[2, 0], sibori2[2, 3], sibori2[2, 4]);
-            dataGridView2.Rows.Add("4. " + sibori2[3, 0], sibori2[3, 3], sibori2[3, 4]);
-            dataGridView2.Rows.Add("4. " + sibori2[4, 0], sibori2[4, 3], sibori2[4, 4]);
+            dataGridView2.Rows.Add("1. " + sibori3[0, 0], sibori3[0, 3], sibori3[0, 4]);
+            dataGridView2.Rows.Add("2. " + sibori3[1, 0], sibori3[1, 3], sibori3[1, 4]);
+            dataGridView2.Rows.Add("3. " + sibori3[2, 0], sibori3[2, 3], sibori3[2, 4]);
+            dataGridView2.Rows.Add("4. " + sibori3[3, 0], sibori3[3, 3], sibori3[3, 4]);
+            dataGridView2.Rows.Add("5. " + sibori3[4, 0], sibori3[4, 3], sibori3[4, 4]);
 
             //データ真ん中
             dataGridView2.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -180,7 +181,7 @@ namespace RBS
             }
 
         }
-
+        //絞り3回目
         public void reccomend3(int pattern3)
         {
             //レポートの評価大
@@ -189,14 +190,14 @@ namespace RBS
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    if (sibori1[i, 0] == "") break;
-                    if (int.Parse(sibori1[i, 21]) != -1 && sibori1[i, 0] != "")
+                    if (sibori2[i, 0] == "") break;
+                    if (int.Parse(sibori2[i, 21]) != -1 && sibori2[i, 0] != "")
                     {
-                        if (int.Parse(sibori1[i, 21]) > 50)
+                        if (double.Parse(sibori1[i,17]) > 50)
                         {
                             for (int j = 0; j < 22; j++)
                             {
-                                sibori2[index, j] = sibori1[i, j];
+                                sibori3[index, j] = sibori2[i, j];
                             }
                             index++;
                         }
@@ -212,11 +213,11 @@ namespace RBS
                     if (sibori1[i, 0] == null) break;
                     if (int.Parse(sibori1[i, 21]) != -1)
                     {
-                        if (int.Parse(sibori1[i, 21]) < 50 && sibori1[i, 0] != null)
+                        if (double.Parse(sibori1[i, 17])+ double.Parse(sibori1[i, 18]) + double.Parse(sibori1[i, 19]) > 70 && sibori1[i, 0] != null)
                         {
                             for (int j = 0; j < 22; j++)
                             {
-                                sibori2[index, j] = sibori1[i, j];
+                                sibori3[index, j] = sibori3[i, j];
                             }
                             index++;
                         }
@@ -246,7 +247,7 @@ namespace RBS
             int index = 0;
             if (pattern2 == 0)
             {
-                for (int i = 0; i < 30; i++)
+                for (int i = 0; i < 31; i++)
                 {
                     if (sibori1[i, 0] == "") break;
                     if (int.Parse(sibori1[i, 21]) != -1 && sibori1[i, 0] != "")
@@ -266,7 +267,7 @@ namespace RBS
             }
             else
             {
-                for (int i = 0; i < 30; i++)
+                for (int i = 0; i < 31; i++)
                 {
                     if (sibori1[i, 0] == null) break;
                     if (int.Parse(sibori1[i, 21]) != -1)
