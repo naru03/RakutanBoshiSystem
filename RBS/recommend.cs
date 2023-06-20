@@ -181,25 +181,13 @@ namespace RBS
 
         }
 
-
-
-        public void reccomendbug()
-        {
-            if (int.Parse(sibori1[0, 21]) > 50)
-            {
-                sibori1[0, 21] = "aaa";
-            }
-        }
-
-
-        //絞り2回目
-        public void reccomend2(int pattern2)
+        public void reccomend3(int pattern3)
         {
             //レポートの評価大
             int index = 0;
-            if (pattern2 == 0)
+            if (pattern3 == 0)
             {
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 10; i++)
                 {
                     if (sibori1[i, 0] == "") break;
                     if (int.Parse(sibori1[i, 21]) != -1 && sibori1[i, 0] != "")
@@ -219,7 +207,66 @@ namespace RBS
             }
             else
             {
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 10; i++)
+                {
+                    if (sibori1[i, 0] == null) break;
+                    if (int.Parse(sibori1[i, 21]) != -1)
+                    {
+                        if (int.Parse(sibori1[i, 21]) < 50 && sibori1[i, 0] != null)
+                        {
+                            for (int j = 0; j < 22; j++)
+                            {
+                                sibori2[index, j] = sibori1[i, j];
+                            }
+                            index++;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+
+
+        public void reccomendbug()
+        {
+            if (int.Parse(sibori1[0, 21]) > 50)
+            {
+                sibori1[0, 21] = "aaa";
+            }
+        }
+
+
+        //絞り2回目
+        public void reccomend2(int pattern2)
+        {
+            //レポートの評価大
+            int index = 0;
+            if (pattern2 == 0)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    if (sibori1[i, 0] == "") break;
+                    if (int.Parse(sibori1[i, 21]) != -1 && sibori1[i, 0] != "")
+                    {
+                        if (int.Parse(sibori1[i, 21]) > 50)
+                        {
+                            for (int j = 0; j < 22; j++)
+                            {
+                                sibori2[index, j] = sibori1[i, j];
+                            }
+                            index++;
+                        }
+                    }
+
+                }
+
+            }
+            else
+            {
+                for (int i = 0; i < 30; i++)
                 {
                     if (sibori1[i, 0] == null) break;
                     if (int.Parse(sibori1[i, 21]) != -1)
@@ -239,4 +286,6 @@ namespace RBS
 
         }
     }
+
+
 }
