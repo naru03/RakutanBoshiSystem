@@ -15,27 +15,36 @@ namespace RBS
         public Exceltebiki()
         {
 
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "GPA分布.xlsx");
-            XLWorkbook book = new XLWorkbook(filePath);
-            var ws = book.Worksheet(1);
+            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string relativePath = @"..\..\GPA分布.xlsx";
+            string filePath = Path.Combine(currentDirectory, relativePath);
 
-
-            List<string> listA = new List<string>();
-            List<string> listB = new List<string>();
-
-            // セルの値を読み取り
-            //行数だけ繰り返す
-            for (int row = 0; row < 208; row++)
+            if (File.Exists(filePath))
             {
-                //列数だけ繰り返す
-                for (int col = 0; col < 22; col++)
-                {
-                    //文字列型に変換
-                    string value = ws.Cell(row + 2, col + 1).Value.ToString();
-                    Data[row, col] = value;
-                    Console.WriteLine(Data[row, col]);
+                XLWorkbook book = new XLWorkbook(filePath);
+                var ws = book.Worksheet(1);
+                // ファイルの読み込み処理を行う
+                List<string> listA = new List<string>();
+                List<string> listB = new List<string>();
 
+                // セルの値を読み取り
+                //行数だけ繰り返す
+                for (int row = 0; row < 208; row++)
+                {
+                    //列数だけ繰り返す
+                    for (int col = 0; col < 22; col++)
+                    {
+                        //文字列型に変換
+                        string value = ws.Cell(row + 2, col + 1).Value.ToString();
+                        Data[row, col] = value;
+                        Console.WriteLine(Data[row, col]);
+
+                    }
                 }
+            }
+            else
+            {
+                Console.WriteLine("指定したファイルが存在しません。");
             }
         }
     }
