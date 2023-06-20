@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Security;
@@ -11,15 +12,17 @@ using System.Text;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 
-namespace RBS;
-
-public partial class fileinput : Form
+namespace RBS
 {
-    String[,] Kamoku = new string[100, 11];
-    public fileinput()
+
+    public partial class fileinput : Form
     {
-        InitializeComponent();
-    }
+        public static String[,] Kamoku = new string[100, 11];
+
+        public fileinput()
+        {
+            InitializeComponent();
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -73,8 +76,21 @@ public partial class fileinput : Form
             }
         }
 
-    private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-    {
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var question = new question();
+            question.Show();
+
+            this.Hide();
+        }
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void title_Click(object sender, EventArgs e)
+        {
 
         }
     }
