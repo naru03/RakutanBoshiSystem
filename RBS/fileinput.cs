@@ -78,4 +78,3 @@ public partial class fileinput : Form
 
         }
     }
-}
