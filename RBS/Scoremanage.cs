@@ -37,10 +37,10 @@ namespace RBS
             int scoresize = fileinput.Kamoku.GetLength(0);
 
             //配列格納カウント用
-            int scount = 0;
-            int jcount = 0;
-            int gcount = 0;
-            int tcount = 0;
+            //int scount = 0;
+            //int jcount = 0;
+            //int gcount = 0;
+            //int tcount = 0;
             for (int i = 0; i < scoresize; i++)
             {
                 if (fileinput.Kamoku[i, 0] == "専門")
@@ -78,10 +78,6 @@ namespace RBS
             }
 
             //配列分岐
-            static void main()
-            { 
-
-            }
 
 
             //取得終わり
