@@ -36,6 +36,13 @@ namespace RBS
                     pattern3 = 1;
                 }
 
+                Scoremanage.taikusum = 0;
+                Scoremanage.gengosum = 0;
+                Scoremanage.senmonsum = 0;
+                Scoremanage.suurisum = 0;
+                Scoremanage.allscore = 0;
+                Scoremanage.jinbunsum = 0;
+
                 var form2 = new recommend();
                 form2.Show();
 
@@ -50,6 +57,7 @@ namespace RBS
 
         private void button2_Click(object sender, EventArgs e)
         {
+           
             question.ctr3.Visible = false;
             question.ctr2.Visible = true;
 
