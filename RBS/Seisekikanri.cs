@@ -8,6 +8,7 @@ namespace RBS
 {
     public class Seisekikanri
     {
+
     }
 }
 
