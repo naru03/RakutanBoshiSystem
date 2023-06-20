@@ -1,10 +1,4 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Wordprocessing;
-using System.Drawing;
-using System.Drawing.Printing;
-using System.Windows.Forms;
-
-namespace RBS
+﻿namespace アンケート管理部
 {
     partial class recommend
     {
