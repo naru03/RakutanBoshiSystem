@@ -43,7 +43,7 @@ namespace RBS
                 label1.Text = "どちらか選択してください！";
 
             }
-           
+
         }
     }
 }

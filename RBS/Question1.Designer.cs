@@ -28,70 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            button1 = new Button();
+            label1 = new Label();
+            SuspendLayout();
             // 
             // radioButton1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.radioButton1.Location = new System.Drawing.Point(248, 185);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(496, 52);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "なるべく専門科目がいい";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.AutoSize = true;
+            radioButton1.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButton1.Location = new Point(248, 257);
+            radioButton1.Margin = new Padding(3, 4, 3, 4);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(496, 52);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "なるべく専門科目がいい";
+            radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("MS UI Gothic", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.radioButton2.Location = new System.Drawing.Point(897, 189);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(547, 48);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "なるべく専門科目以外がいい";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.AutoSize = true;
+            radioButton2.Font = new Font("MS UI Gothic", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButton2.Location = new Point(897, 262);
+            radioButton2.Margin = new Padding(3, 4, 3, 4);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(547, 48);
+            radioButton2.TabIndex = 1;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "なるべく専門科目以外がいい";
+            radioButton2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1137, 375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 100);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "次へ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new Font("MS UI Gothic", 18F, FontStyle.Italic, GraphicsUnit.Point);
+            button1.Location = new Point(1137, 521);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(201, 139);
+            button1.TabIndex = 2;
+            button1.Text = "次へ";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(1213, 487);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 24);
-            this.label1.TabIndex = 3;
+            label1.AutoSize = true;
+            label1.Font = new Font("MS UI Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.IndianRed;
+            label1.Location = new Point(1213, 676);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 24);
+            label1.TabIndex = 3;
             // 
-            // UserControl1
+            // Question1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightYellow;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(1657, 911);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightYellow;
+            Controls.Add(label1);
+            Controls.Add(button1);
+            Controls.Add(radioButton2);
+            Controls.Add(radioButton1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Question1";
+            Size = new Size(1657, 1265);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

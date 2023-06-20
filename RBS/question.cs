@@ -30,7 +30,15 @@ namespace RBS
 
             ctr1.Visible = true;
             ctr2.Visible = false;
-            ctr3.Visible = false;   
+            ctr3.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var fileinput = new fileinput();
+            fileinput.Show();
+
+            this.Hide();
         }
     }
 }

@@ -28,52 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            label1 = new Label();
+            panel1 = new Panel();
+            label2 = new Label();
+            button1 = new Button();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(813, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 68);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Raku単くん";
+            label1.Font = new Font("MS UI Gothic", 26F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(813, 90);
+            label1.Name = "label1";
+            label1.Size = new Size(311, 94);
+            label1.TabIndex = 0;
+            label1.Text = "Raku単くん";
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(181, 227);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1525, 487);
-            this.panel1.TabIndex = 1;
+            panel1.Location = new Point(181, 315);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1525, 676);
+            panel1.TabIndex = 1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(266, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 36);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "アンケート";
+            label2.AutoSize = true;
+            label2.Font = new Font("MS UI Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(266, 236);
+            label2.Name = "label2";
+            label2.Size = new Size(156, 36);
+            label2.TabIndex = 2;
+            label2.Text = "アンケート";
             // 
-            // Form1
+            // button1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightYellow;
-            this.ClientSize = new System.Drawing.Size(1733, 806);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            button1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(1283, 237);
+            button1.Name = "button1";
+            button1.Size = new Size(237, 40);
+            button1.TabIndex = 3;
+            button1.Text = "読み込み画面に戻る";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // question
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightYellow;
+            ClientSize = new Size(1733, 1050);
+            Controls.Add(button1);
+            Controls.Add(label2);
+            Controls.Add(panel1);
+            Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "question";
+            Text = "Form1";
+            WindowState = FormWindowState.Maximized;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -81,6 +95,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private Button button1;
     }
 }
 

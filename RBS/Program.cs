@@ -1,4 +1,4 @@
-using アンケート管理部;
+
 
 namespace RBS
 {

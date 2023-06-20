@@ -30,6 +30,7 @@ partial class fileinput
     {
         Label title;
         button1 = new Button();
+        button2 = new Button();
         label1 = new Label();
         linkLabel1 = new LinkLabel();
         openFileDialog1 = new OpenFileDialog();
@@ -60,6 +61,17 @@ partial class fileinput
         button1.Text = "選択";
         button1.UseVisualStyleBackColor = true;
         button1.Click += button1_Click;
+        // 
+        // button2
+        // 
+        button2.Font = new Font("ＭＳ ゴシック", 9F, FontStyle.Regular, GraphicsUnit.Point);
+        button2.Location = new Point(700, 122);
+        button2.Name = "button1";
+        button2.Size = new Size(88, 23);
+        button2.TabIndex = 0;
+        button2.Text = "読み込み";
+        button2.UseVisualStyleBackColor = true;
+        button2.Click += button2_Click;
         // 
         // label1
         // 
@@ -115,6 +127,7 @@ partial class fileinput
         Controls.Add(label1);
         Controls.Add(title);
         Controls.Add(button1);
+        Controls.Add(button2);
         Name = "Form1";
         Text = "Form1";
         Load += Form1_Load;
@@ -126,6 +139,7 @@ partial class fileinput
     #endregion
 
     private Button button1;
+    private Button button2;
     private Label title;
     private Label label1;
     private LinkLabel linkLabel1;

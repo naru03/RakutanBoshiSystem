@@ -35,8 +35,8 @@ namespace RBS
                 {
                     pattern3 = 1;
                 }
-                
-                var form2= new recommend();
+
+                var form2 = new recommend();
                 form2.Show();
 
 
@@ -52,7 +52,12 @@ namespace RBS
         {
             question.ctr3.Visible = false;
             question.ctr2.Visible = true;
-            
+
+        }
+
+        private void Question3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
