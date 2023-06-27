@@ -71,7 +71,7 @@ namespace RBS
             // 
             button2.Font = new System.Drawing.Font("ＭＳ ゴシック", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button2.Location = new Point(700, 122);
-            button2.Name = "button1";
+            button2.Name = "button2";
             button2.Size = new Size(88, 23);
             button2.TabIndex = 0;
             button2.Text = "読み込み";
@@ -121,11 +121,11 @@ namespace RBS
             dataGridView1.Size = new Size(1167, 204);
             dataGridView1.TabIndex = 5;
             // 
-            // Form1
+            // fileinput
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1224, 399);
+            ClientSize = new Size(1224, 401);
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Controls.Add(linkLabel1);
@@ -133,7 +133,7 @@ namespace RBS
             Controls.Add(title);
             Controls.Add(button1);
             Controls.Add(button2);
-            Name = "Form1";
+            Name = "fileinput";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
