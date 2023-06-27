@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*******************************************************************
+*** File Name : Scoremanage.cs
+*** Version : V1.0
+*** Designer : 白石 京馬
+*** Date : 2023.06.26
+*** Purpose : 現在の単位数を計算する。
+***
+*******************************************************************/
+/*
+*** Revision :
+*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*/
+
+using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,19 +92,6 @@ namespace RBS
                 }
                   
             }
-
-            //配列分岐
-
-
-            //取得終わり
-
-            //それぞれの科目区分の単位数計算
-
-            //計算終わり
-
-            //レコメンド画面に現在の単位数の値を格納
-
-            //格納終わり
 
 
         }

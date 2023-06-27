@@ -107,7 +107,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("MS UI Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(930, 89);
             label1.Name = "label1";
             label1.Size = new Size(180, 36);
@@ -119,12 +119,12 @@
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column8, Column9, Column10 });
-            dataGridView2.Location = new Point(788, 483);
+            dataGridView2.Location = new Point(726, 483);
             dataGridView2.Margin = new Padding(3, 4, 3, 4);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.RowTemplate.Height = 27;
-            dataGridView2.Size = new Size(514, 490);
+            dataGridView2.Size = new Size(559, 180);
             dataGridView2.TabIndex = 2;
             // 
             // Column8
@@ -147,7 +147,7 @@
             // 
             // button1
             // 
-            button1.Font = new System.Drawing.Font("MS UI Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("MS UI Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(1378, 383);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
@@ -160,7 +160,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(859, 411);
             label2.Name = "label2";
             label2.Size = new Size(110, 32);
@@ -170,7 +170,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Yu Gothic UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Yu Gothic UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(458, 424);
             label3.Name = "label3";
             label3.Size = new Size(279, 38);
@@ -180,7 +180,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(1006, 411);
             label4.Name = "label4";
             label4.Size = new Size(80, 32);
@@ -191,7 +191,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.LightYellow;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1858, 1050);
             Controls.Add(label4);
             Controls.Add(label3);

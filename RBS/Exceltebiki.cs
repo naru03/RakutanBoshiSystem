@@ -1,9 +1,26 @@
-﻿using ClosedXML.Excel;
+﻿/*******************************************************************
+*** File Name : Exceltebiki.cs
+*** Version : V1.0
+*** Designer : 白石 京馬
+*** Date : 2023.06.26
+*** Purpose : エクセルファイルを読み込み、成績の参照用のdataを配列に格納。
+***
+*******************************************************************/
+/*
+*** Revision :
+*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*/
+
+using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClosedXML.Excel;
 using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace RBS
@@ -14,37 +31,27 @@ namespace RBS
 
         public Exceltebiki()
         {
+            const string path = @"C:\Users\Haruma\Desktop\高度2B\GPA分布.xlsx"; //パスは変えてください。
+            XLWorkbook book = new XLWorkbook(path);
+            var ws = book.Worksheet(1);
 
-            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string relativePath = @"..\..\GPA分布.xlsx";
-            string filePath = Path.Combine(currentDirectory, relativePath);
 
-            if (File.Exists(filePath))
+            List<string> listA = new List<string>();
+            List<string> listB = new List<string>();
+
+            // セルの値を読み取り
+            //行数だけ繰り返す
+            for (int row = 0; row < 208; row++)
             {
-                XLWorkbook book = new XLWorkbook(filePath);
-                var ws = book.Worksheet(1);
-                // ファイルの読み込み処理を行う
-                List<string> listA = new List<string>();
-                List<string> listB = new List<string>();
-
-                // セルの値を読み取り
-                //行数だけ繰り返す
-                for (int row = 0; row < 208; row++)
+                //列数だけ繰り返す
+                for (int col = 0; col < 23; col++)
                 {
-                    //列数だけ繰り返す
-                    for (int col = 0; col < 22; col++)
-                    {
-                        //文字列型に変換
-                        string value = ws.Cell(row + 2, col + 1).Value.ToString();
-                        Data[row, col] = value;
-                        Console.WriteLine(Data[row, col]);
+                    //文字列型に変換
+                    string value = ws.Cell(row + 2, col + 1).Value.ToString();
+                    Data[row, col] = value;
+                    Console.WriteLine(Data[row, col]);
 
-                    }
                 }
-            }
-            else
-            {
-                Console.WriteLine("指定したファイルが存在しません。");
             }
         }
     }

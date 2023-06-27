@@ -100,7 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightYellow;
+            BackColor = SystemColors.Control;
             Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(radioButton2);
