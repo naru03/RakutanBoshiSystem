@@ -124,7 +124,7 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.RowTemplate.Height = 27;
-            dataGridView2.Size = new Size(559, 180);
+            dataGridView2.Size = new Size(570, 244);
             dataGridView2.TabIndex = 2;
             // 
             // Column8

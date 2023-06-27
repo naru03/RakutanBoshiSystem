@@ -73,7 +73,7 @@ namespace RBS
             dataGridView2.Columns[1].HeaderText = "授業名";
             dataGridView2.Columns[2].HeaderText = "単位数";
 
-            
+
 
             //データを追加
             if (recommendalgo.sibori3[0, 0] == null)
@@ -82,7 +82,7 @@ namespace RBS
             }
             else
             {
-               
+
                 dataGridView2.Rows.Add("1. " + recommendalgo.sibori3[0, 0], recommendalgo.sibori3[0, 3], recommendalgo.sibori3[0, 4]);
             }
 
@@ -139,6 +139,6 @@ namespace RBS
             Environment.Exit(0);
         }
 
-        
+
     }
 }
