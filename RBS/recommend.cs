@@ -1,20 +1,4 @@
-﻿/*******************************************************************
-*** File Name : recommend.cs
-*** Version : V1.0
-*** Designer : 白石 京馬
-*** Date : 2023.06.26
-*** Purpose : レコメンドの表示画面。
-***
-*******************************************************************/
-/*
-*** Revision :
-*** V1.0 : 作成者名, yyyy.mm.dd
-*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
-*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
-*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
-*/
-
-using System;
+﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,8 +14,6 @@ using System.Runtime.InteropServices;
 using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using RBS;
-using static System.Windows.Forms.LinkLabel;
-using System.Diagnostics;
 
 namespace RBS
 {
@@ -43,13 +25,24 @@ namespace RBS
             InitializeComponent();
         }
 
-        /****************************************************************************
-       *** Method Name : Form2_Load_1()
-       *** Designer : 白石 京馬
-       *** Date : 2023.6.26
-       *** Method : 単位数の表示やレコメンドした科目の表示
-       *** Return : ×
-       ****************************************************************************/
+        //レコメンド画面表示
+        //private void Reccomend_Diaplay()
+        //{
+
+        //}
+
+        //レコメンド画面のアルゴリズム
+        //private void Reccomend_Algo()
+        //{
+
+        //}
+
+        //表に授業データやこれまでの単位数を自動で書き込む
+        //private void Reccomec_Data_Input() 
+        //{
+
+        //}
+
 
 
         private void Form2_Load_1(object sender, EventArgs e)
@@ -73,8 +66,6 @@ namespace RBS
             dataGridView2.Columns[1].HeaderText = "授業名";
             dataGridView2.Columns[2].HeaderText = "単位数";
 
-
-
             //データを追加
             if (recommendalgo.sibori3[0, 0] == null)
             {
@@ -82,7 +73,6 @@ namespace RBS
             }
             else
             {
-
                 dataGridView2.Rows.Add("1. " + recommendalgo.sibori3[0, 0], recommendalgo.sibori3[0, 3], recommendalgo.sibori3[0, 4]);
             }
 
@@ -129,15 +119,13 @@ namespace RBS
             //一番左野項目列を削除
             dataGridView2.RowHeadersVisible = false;
 
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
+
 
 
     }
