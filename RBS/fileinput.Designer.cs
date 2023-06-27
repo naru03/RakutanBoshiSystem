@@ -41,6 +41,7 @@ namespace RBS
             openFileDialog1 = new OpenFileDialog();
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
+            label2 = new Label();
             title = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -49,9 +50,10 @@ namespace RBS
             // 
             title.AutoSize = true;
             title.Font = new System.Drawing.Font("ＭＳ ゴシック", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
-            title.Location = new Point(158, 26);
+            title.Location = new Point(226, 43);
+            title.Margin = new Padding(4, 0, 4, 0);
             title.Name = "title";
-            title.Size = new Size(303, 35);
+            title.Size = new Size(455, 53);
             title.TabIndex = 1;
             title.Text = "落単防止システム";
             title.Click += title_Click;
@@ -59,9 +61,10 @@ namespace RBS
             // button1
             // 
             button1.Font = new System.Drawing.Font("ＭＳ ゴシック", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(498, 122);
+            button1.Location = new Point(711, 203);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(88, 23);
+            button1.Size = new Size(126, 38);
             button1.TabIndex = 0;
             button1.Text = "選択";
             button1.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@ namespace RBS
             // button2
             // 
             button2.Font = new System.Drawing.Font("ＭＳ ゴシック", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(700, 122);
+            button2.Location = new Point(1000, 203);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(88, 23);
+            button2.Size = new Size(126, 38);
             button2.TabIndex = 0;
             button2.Text = "読み込み";
             button2.UseVisualStyleBackColor = true;
@@ -82,9 +86,10 @@ namespace RBS
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("ＭＳ ゴシック", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(27, 124);
+            label1.Location = new Point(39, 207);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(135, 15);
+            label1.Size = new Size(202, 23);
             label1.TabIndex = 2;
             label1.Text = "ファイル読み込み";
             // 
@@ -92,9 +97,10 @@ namespace RBS
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new System.Drawing.Font("ＭＳ ゴシック", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            linkLabel1.Location = new Point(27, 87);
+            linkLabel1.Location = new Point(39, 145);
+            linkLabel1.Margin = new Padding(4, 0, 4, 0);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(125, 12);
+            linkLabel1.Size = new Size(188, 18);
             linkLabel1.TabIndex = 3;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "ファイル作成のやり方";
@@ -107,25 +113,40 @@ namespace RBS
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(168, 121);
+            textBox1.Location = new Point(240, 202);
+            textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(324, 23);
+            textBox1.Size = new Size(461, 31);
             textBox1.TabIndex = 4;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(27, 183);
+            dataGridView1.Location = new Point(39, 305);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1167, 204);
+            dataGridView1.Size = new Size(1667, 340);
             dataGridView1.TabIndex = 5;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = System.Drawing.Color.Red;
+            label2.Location = new Point(755, 145);
+            label2.Name = "label2";
+            label2.Size = new Size(14, 32);
+            label2.TabIndex = 6;
+            label2.Text = "\r\n";
             // 
             // fileinput
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1224, 401);
+            ClientSize = new Size(1749, 668);
+            Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Controls.Add(linkLabel1);
@@ -133,6 +154,7 @@ namespace RBS
             Controls.Add(title);
             Controls.Add(button1);
             Controls.Add(button2);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "fileinput";
             Text = "Form1";
             Load += Form1_Load;
@@ -151,5 +173,6 @@ namespace RBS
         private OpenFileDialog openFileDialog1;
         private TextBox textBox1;
         private DataGridView dataGridView1;
+        private Label label2;
     }
 }
