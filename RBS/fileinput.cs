@@ -1,3 +1,19 @@
+/*******************************************************************
+*** File Name : fileinput.cs
+*** Version : V1.0
+*** Designer : 根本 成明
+*** Date : 2023.06.26
+*** Purpose : ファイルを読み込み、画面表示を行う。
+***
+*******************************************************************/
+/*
+*** Revision :
+*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*/
+
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
@@ -86,6 +102,8 @@ namespace RBS
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            var setumei= new setumei();
+            setumei.Show();
 
         }
 
