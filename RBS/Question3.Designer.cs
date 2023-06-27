@@ -38,10 +38,10 @@
             // button1
             // 
             button1.Font = new Font("MS UI Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(1089, 476);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(762, 286);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(298, 115);
+            button1.Size = new Size(209, 69);
             button1.TabIndex = 0;
             button1.Text = "レコメンド画面へ";
             button1.UseVisualStyleBackColor = true;
@@ -51,10 +51,10 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(308, 285);
-            radioButton1.Margin = new Padding(3, 4, 3, 4);
+            radioButton1.Location = new Point(216, 171);
+            radioButton1.Margin = new Padding(2, 2, 2, 2);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(418, 52);
+            radioButton1.Size = new Size(280, 37);
             radioButton1.TabIndex = 1;
             radioButton1.TabStop = true;
             radioButton1.Text = "GPAを気にしてる？";
@@ -65,10 +65,10 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(889, 285);
-            radioButton2.Margin = new Padding(3, 4, 3, 4);
+            radioButton2.Location = new Point(622, 171);
+            radioButton2.Margin = new Padding(2, 2, 2, 2);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(429, 52);
+            radioButton2.Size = new Size(288, 37);
             radioButton2.TabIndex = 2;
             radioButton2.TabStop = true;
             radioButton2.Text = "とりあえず単位よこせ";
@@ -79,18 +79,19 @@
             label1.AutoSize = true;
             label1.Font = new Font("MS UI Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.IndianRed;
-            label1.Location = new Point(1116, 626);
+            label1.Location = new Point(781, 376);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(0, 28);
+            label1.Size = new Size(0, 19);
             label1.TabIndex = 3;
             // 
             // button2
             // 
             button2.Font = new Font("MS UI Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(260, 88);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(182, 53);
+            button2.Margin = new Padding(2, 2, 2, 2);
             button2.Name = "button2";
-            button2.Size = new Size(113, 53);
+            button2.Size = new Size(79, 32);
             button2.TabIndex = 4;
             button2.Text = "戻る\r\n";
             button2.UseVisualStyleBackColor = true;
@@ -98,7 +99,7 @@
             // 
             // Question3
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightYellow;
             Controls.Add(button2);
@@ -106,9 +107,9 @@
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(button1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Question3";
-            Size = new Size(1662, 1193);
+            Size = new Size(1240, 440);
             Load += Question3_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -116,10 +117,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private Button button1;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
+        private Label label1;
+        private Button button2;
     }
 }
