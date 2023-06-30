@@ -32,7 +32,7 @@ namespace RBS
 
         public Exceltebiki()
         {
-            const string path = @"C:\Users\Haruma\Desktop\高度2B\GPA分布.xlsx"; //パスは変えてください。
+            const string path = @"C:\Users\kohki\Desktop\kodo1B\GPA分布.xlsx"; //パスは変えてください。
             XLWorkbook book = new XLWorkbook(path);
             var ws = book.Worksheet(1);
           
