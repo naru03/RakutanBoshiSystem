@@ -48,6 +48,7 @@ namespace RBS
         public static int allscore = 0;
         public static int zengaku = 0;
         public static int kyoutuu = 0;
+        public static int gakkakateigai = 0;
 
         public Scoremanage()
         {
@@ -63,11 +64,19 @@ namespace RBS
             //int kyoutuu = 0;
             for (int i = 0; i < scoresize; i++)
             {
-                if (fileinput.Kamoku[i, 0] == "全学共通科目")
+                if (fileinput.Kamoku[i, 0] == "学科課程外科目")
                 {
                     if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
                     {
-                        zengaku = senmonsum + int.Parse(fileinput.Kamoku[i, 4]);
+                        gakkakateigai = gakkakateigai + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
+                }
+                else if (fileinput.Kamoku[i, 0] == "全学共通科目")
+                {
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        zengaku = zengaku + int.Parse(fileinput.Kamoku[i, 4]);
                         allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                     }
                 }
@@ -108,12 +117,6 @@ namespace RBS
                 {
 
                     suurisum = suurisum + int.Parse(fileinput.Kamoku[i, 4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
-                }
-                else if (fileinput.Kamoku[i, 0] == "全学共通科目")
-                {
-
-                    zengaku = zengaku + int.Parse(fileinput.Kamoku[i, 4]);
                     allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                 }
                 else if (fileinput.Kamoku[i, 0] == "工学部共通")
