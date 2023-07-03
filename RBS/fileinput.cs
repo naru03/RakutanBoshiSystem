@@ -95,14 +95,22 @@ namespace RBS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var question = new question();
-            question.Show();
+    
+            if (textBox1 == null || textBox1.Text.Contains(".htm") == false)
+            {
+                label2.Text = "ファイルがありません！";
+            }
+            else
+            {
+                var question = new question();
+                question.Show();
 
-            this.Hide();
+                this.Hide();
+            }
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var setumei= new setumei();
+            var setumei = new setumei();
             setumei.Show();
 
         }
