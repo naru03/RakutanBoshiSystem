@@ -1,15 +1,15 @@
 ﻿/*******************************************************************
 *** File Name : Scoremanage.cs
-*** Version : V1.0
-*** Designer : 白石 京馬
-*** Date : 2023.06.26
+*** Version : V1.1
+*** Designer : 植竹　航也
+*** Date : 2023.07.03
 *** Purpose : 現在の単位数を計算する。
 ***
 *******************************************************************/
 /*
 *** Revision :
-*** V1.0 : 作成者名, yyyy.mm.dd
-*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.0 : 白石 京馬, 2023.06.26
+*** V1.1 : 植竹 航也, 2023.07.03
 *** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 */
@@ -46,6 +46,8 @@ namespace RBS
         public static int taikusum = 0;
         public static int suurisum = 0;
         public static int allscore = 0;
+        public static int zengaku = 0;
+        public static int kyoutuu = 0;
 
         public Scoremanage()
         {
@@ -57,6 +59,8 @@ namespace RBS
             //int jcount = 0;
             //int gcount = 0;
             //int tcount = 0;
+            //int zengaku = 0;
+            //int kyoutuu = 0;
             for (int i = 0; i < scoresize; i++)
             {
                 if (fileinput.Kamoku[i, 0] == "専門")
@@ -90,7 +94,19 @@ namespace RBS
                     suurisum = suurisum + int.Parse(fileinput.Kamoku[i, 4]);
                     allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                 }
-                  
+                else if (fileinput.Kamoku[i, 0] == "全学共通科目")
+                {
+
+                    zengaku = zengaku + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                }
+                else if (fileinput.Kamoku[i, 0] == "工学部共通")
+                {
+
+                    kyoutuu = kyoutuu + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                }
+
             }
 
 

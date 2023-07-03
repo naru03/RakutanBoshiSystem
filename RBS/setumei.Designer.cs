@@ -68,6 +68,7 @@
             label3.Size = new Size(666, 40);
             label3.TabIndex = 2;
             label3.Text = "FireFoxでscomzにアクセスし、sgsotを開く";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -148,6 +149,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "setumei";
             Text = "setumei";
+            Load += setumei_Load;
             ResumeLayout(false);
             PerformLayout();
         }
