@@ -32,9 +32,8 @@ namespace RBS
 
         public Exceltebiki()
         {
-            const string path = @"C:\Users\Haruma\source\repos\RakutanBoshiSystem\RBS\GPA分布.xlsx";
-            string currentDirectory = Directory.GetCurrentDirectory();
-            string fullPath = Path.Combine(currentDirectory, path);
+            const string path = "GPA分布.xlsx";
+            string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
 
             XLWorkbook book = new XLWorkbook(fullPath);
             var ws = book.Worksheet(1);
