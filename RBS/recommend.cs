@@ -66,6 +66,14 @@ namespace RBS
             dataGridView2.Columns[1].HeaderText = "授業名";
             dataGridView2.Columns[2].HeaderText = "単位数";
 
+            DataGridViewLinkColumn linkColumn = new DataGridViewLinkColumn();
+            linkColumn.HeaderText = "リンク";
+            linkColumn.Name = "LinkColumn";
+            dataGridView2.Columns.Add(linkColumn);
+
+
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+
             //データを追加
             if (recommendalgo.sibori3[0, 0] == null)
             {
@@ -74,6 +82,9 @@ namespace RBS
             else
             {
                 dataGridView2.Rows.Add("1. " + recommendalgo.sibori3[0, 0], recommendalgo.sibori3[0, 3], recommendalgo.sibori3[0, 4]);
+                DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+                linkCell.Value = recommendalgo.sibori3[0, 22];
+                dataGridView2.Rows[0].Cells["LinkColumn"] = linkCell;
             }
 
             if (recommendalgo.sibori3[1, 0] == null)
@@ -83,6 +94,9 @@ namespace RBS
             else
             {
                 dataGridView2.Rows.Add("2. " + recommendalgo.sibori3[1, 0], recommendalgo.sibori3[1, 3], recommendalgo.sibori3[1, 4]);
+                DataGridViewLinkCell linkCell2 = new DataGridViewLinkCell();
+                linkCell2.Value = recommendalgo.sibori3[1, 22];
+                dataGridView2.Rows[1].Cells["LinkColumn"] = linkCell2;
             }
 
             if (recommendalgo.sibori3[2, 0] == null)
@@ -92,6 +106,9 @@ namespace RBS
             else
             {
                 dataGridView2.Rows.Add("3. " + recommendalgo.sibori3[2, 0], recommendalgo.sibori3[2, 3], recommendalgo.sibori3[2, 4]);
+                DataGridViewLinkCell linkCell3 = new DataGridViewLinkCell();
+                linkCell3.Value = recommendalgo.sibori3[2, 22];
+                dataGridView2.Rows[2].Cells["LinkColumn"] = linkCell3;
             }
 
             if (recommendalgo.sibori3[3, 0] == null)
@@ -101,6 +118,9 @@ namespace RBS
             else
             {
                 dataGridView2.Rows.Add("4. " + recommendalgo.sibori3[3, 0], recommendalgo.sibori3[3, 3], recommendalgo.sibori3[3, 4]);
+                DataGridViewLinkCell linkCell4 = new DataGridViewLinkCell();
+                linkCell4.Value = recommendalgo.sibori3[3, 22];
+                dataGridView2.Rows[3].Cells["LinkColumn"] = linkCell4;
             }
 
             if (recommendalgo.sibori3[4, 0] == null)
@@ -110,6 +130,9 @@ namespace RBS
             else
             {
                 dataGridView2.Rows.Add("5. " + recommendalgo.sibori3[4, 0], recommendalgo.sibori3[4, 3], recommendalgo.sibori3[4, 4]);
+                DataGridViewLinkCell linkCell5 = new DataGridViewLinkCell();
+                linkCell5.Value = recommendalgo.sibori3[4, 22];
+                dataGridView2.Rows[4].Cells["LinkColumn"] = linkCell5;
             }
 
             //データ真ん中
@@ -118,6 +141,21 @@ namespace RBS
 
             //一番左野項目列を削除
             dataGridView2.RowHeadersVisible = false;
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string link = dataGridView2.Rows[e.RowIndex].Cells[dataGridView2.Columns["LinkColumn"].Index].Value.ToString();
+
+            if (!string.IsNullOrEmpty(link))
+            {
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = link,
+                    UseShellExecute = true
+                });
+            }
 
         }
 

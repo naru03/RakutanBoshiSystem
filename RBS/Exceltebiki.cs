@@ -32,8 +32,11 @@ namespace RBS
 
         public Exceltebiki()
         {
-            const string path = @"C:\Users\kohki\Desktop\kodo1B\GPA分布.xlsx"; //パスは変えてください。
-            XLWorkbook book = new XLWorkbook(path);
+            const string path = @"C:\Users\Haruma\source\repos\RakutanBoshiSystem\RBS\GPA分布.xlsx";
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string fullPath = Path.Combine(currentDirectory, path);
+
+            XLWorkbook book = new XLWorkbook(fullPath);
             var ws = book.Worksheet(1);
           
             // セルの値を読み取り

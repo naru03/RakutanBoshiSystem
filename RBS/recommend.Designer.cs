@@ -130,7 +130,7 @@ namespace RBS
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.RowTemplate.Height = 27;
-            dataGridView2.Size = new Size(514, 490);
+            dataGridView2.Size = new Size(528, 185);
             dataGridView2.TabIndex = 2;
             // 
             // Column8
@@ -197,7 +197,7 @@ namespace RBS
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = System.Drawing.SystemColors.Control;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1858, 1050);
             Controls.Add(label4);
             Controls.Add(label3);
