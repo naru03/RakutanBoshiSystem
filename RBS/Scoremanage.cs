@@ -63,30 +63,46 @@ namespace RBS
             //int kyoutuu = 0;
             for (int i = 0; i < scoresize; i++)
             {
-                if (fileinput.Kamoku[i, 0] == "専門")
+                if (fileinput.Kamoku[i, 0] == "全学共通科目")
                 {
-
-                    senmonsum = senmonsum + int.Parse(fileinput.Kamoku[i,4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        zengaku = senmonsum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
+                }
+                else if (fileinput.Kamoku[i, 0] == "専門")
+                {
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        senmonsum = senmonsum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
 
                 }
                 else if (fileinput.Kamoku[i, 0] == "人文社会系教養")
                 {
-
-                    jinbunsum = jinbunsum + int.Parse(fileinput.Kamoku[i,4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        jinbunsum = jinbunsum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
                 }
                 else if (fileinput.Kamoku[i, 0] == "言語")
                 {
-
-                    gengosum = gengosum + int.Parse(fileinput.Kamoku[i, 4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        gengosum = gengosum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
                 }
                 else if (fileinput.Kamoku[i, 0] == "体育健康")
                 {
-
-                    taikusum = taikusum + int.Parse(fileinput.Kamoku[i, 4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        taikusum = taikusum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
                 }
                 else if (fileinput.Kamoku[i, 0] == "数理基礎")
                 {
