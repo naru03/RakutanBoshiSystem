@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*******************************************************************
+*** File Name : Scoremanage.cs
+*** Version : V1.1
+*** Designer : 植竹　航也
+*** Date : 2023.07.03
+*** Purpose : 現在の単位数を計算する。
+***
+*******************************************************************/
+/*
+*** Revision :
+*** V1.0 : 白石 京馬, 2023.06.26
+*** V1.1 : 植竹 航也, 2023.07.03
+*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*/
+
+using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +46,9 @@ namespace RBS
         public static int taikusum = 0;
         public static int suurisum = 0;
         public static int allscore = 0;
+        public static int zengaku = 0;
+        public static int kyoutuu = 0;
+        public static int gakkakateigai = 0;
 
         public Scoremanage()
         {
@@ -41,32 +60,58 @@ namespace RBS
             //int jcount = 0;
             //int gcount = 0;
             //int tcount = 0;
+            //int zengaku = 0;
+            //int kyoutuu = 0;
             for (int i = 0; i < scoresize; i++)
             {
-                if (fileinput.Kamoku[i, 0] == "専門")
+                if (fileinput.Kamoku[i, 0] == "学科課程外科目")
                 {
-
-                    senmonsum = senmonsum + int.Parse(fileinput.Kamoku[i,4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        gakkakateigai = gakkakateigai + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
+                }
+                else if (fileinput.Kamoku[i, 0] == "全学共通科目")
+                {
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        zengaku = zengaku + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
+                }
+                else if (fileinput.Kamoku[i, 0] == "専門")
+                {
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        senmonsum = senmonsum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
 
                 }
                 else if (fileinput.Kamoku[i, 0] == "人文社会系教養")
                 {
-
-                    jinbunsum = jinbunsum + int.Parse(fileinput.Kamoku[i,4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        jinbunsum = jinbunsum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
                 }
                 else if (fileinput.Kamoku[i, 0] == "言語")
                 {
-
-                    gengosum = gengosum + int.Parse(fileinput.Kamoku[i, 4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        gengosum = gengosum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
                 }
                 else if (fileinput.Kamoku[i, 0] == "体育健康")
                 {
-
-                    taikusum = taikusum + int.Parse(fileinput.Kamoku[i, 4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        taikusum = taikusum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
                 }
                 else if (fileinput.Kamoku[i, 0] == "数理基礎")
                 {
@@ -74,21 +119,14 @@ namespace RBS
                     suurisum = suurisum + int.Parse(fileinput.Kamoku[i, 4]);
                     allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                 }
-                  
+                else if (fileinput.Kamoku[i, 0] == "工学部共通")
+                {
+
+                    kyoutuu = kyoutuu + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                }
+
             }
-
-            //配列分岐
-
-
-            //取得終わり
-
-            //それぞれの科目区分の単位数計算
-
-            //計算終わり
-
-            //レコメンド画面に現在の単位数の値を格納
-
-            //格納終わり
 
 
         }

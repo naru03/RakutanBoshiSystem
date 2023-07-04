@@ -1,3 +1,19 @@
+/*******************************************************************
+*** File Name : fileinput.cs
+*** Version : V1.0
+*** Designer : 根本 成明
+*** Date : 2023.06.26
+*** Purpose : ファイルを読み込み、画面表示を行う。
+***
+*******************************************************************/
+/*
+*** Revision :
+*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*/
+
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
@@ -79,13 +95,23 @@ namespace RBS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var question = new question();
-            question.Show();
+    
+            if (textBox1 == null || textBox1.Text.Contains(".htm") == false)
+            {
+                label2.Text = "ファイルがありません！";
+            }
+            else
+            {
+                var question = new question();
+                question.Show();
 
-            this.Hide();
+                this.Hide();
+            }
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            var setumei = new setumei();
+            setumei.Show();
 
         }
 

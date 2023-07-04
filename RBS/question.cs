@@ -1,4 +1,21 @@
-﻿using System;
+﻿/*******************************************************************
+*** File Name : question.cs
+*** Version : V1.0
+*** Designer : 白石 京馬
+*** Date : 2023.06.26
+*** Purpose : アンケートの表示画面。
+***
+*******************************************************************/
+/*
+*** Revision :
+*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,12 +50,25 @@ namespace RBS
             ctr3.Visible = false;
         }
 
+
+        /****************************************************************************
+       *** Method Name : button1_Clicki()
+       *** Designer : 白石 京馬
+       *** Date : 2023.6.26
+       *** Method : ボタンclick時に読み込み画面へ遷移
+       *** Return : ×
+       ****************************************************************************/
         private void button1_Click(object sender, EventArgs e)
         {
             var fileinput = new fileinput();
             fileinput.Show();
 
             this.Hide();
+        }
+
+        private void question_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

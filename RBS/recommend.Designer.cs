@@ -1,4 +1,10 @@
-﻿namespace RBS
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Windows.Forms;
+
+namespace RBS
 {
     partial class recommend
     {
@@ -45,6 +51,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -54,8 +61,7 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
-            dataGridView1.Location = new Point(506, 215);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(329, 220);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 27;
@@ -108,7 +114,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(930, 89);
+            label1.Location = new Point(770, 92);
             label1.Name = "label1";
             label1.Size = new Size(180, 36);
             label1.TabIndex = 1;
@@ -119,12 +125,11 @@
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column8, Column9, Column10 });
-            dataGridView2.Location = new Point(788, 483);
-            dataGridView2.Margin = new Padding(3, 4, 3, 4);
+            dataGridView2.Location = new Point(590, 465);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.RowTemplate.Height = 27;
-            dataGridView2.Size = new Size(514, 490);
+            dataGridView2.Size = new Size(529, 185);
             dataGridView2.TabIndex = 2;
             // 
             // Column8
@@ -148,10 +153,9 @@
             // button1
             // 
             button1.Font = new System.Drawing.Font("MS UI Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(1378, 383);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(1327, 367);
             button1.Name = "button1";
-            button1.Size = new Size(134, 79);
+            button1.Size = new Size(134, 78);
             button1.TabIndex = 3;
             button1.Text = "おしまい";
             button1.UseVisualStyleBackColor = true;
@@ -161,7 +165,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(859, 411);
+            label2.Location = new Point(727, 388);
             label2.Name = "label2";
             label2.Size = new Size(110, 32);
             label2.TabIndex = 4;
@@ -171,7 +175,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Yu Gothic UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(458, 424);
+            label3.Location = new Point(329, 382);
             label3.Name = "label3";
             label3.Size = new Size(279, 38);
             label3.TabIndex = 5;
@@ -181,18 +185,30 @@
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(1006, 411);
+            label4.Location = new Point(911, 388);
             label4.Name = "label4";
             label4.Size = new Size(80, 32);
             label4.TabIndex = 6;
             label4.Text = "label4";
             // 
+            // button2
+            // 
+            button2.Font = new System.Drawing.Font("Yu Gothic UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(329, 481);
+            button2.Name = "button2";
+            button2.Size = new Size(202, 57);
+            button2.TabIndex = 7;
+            button2.Text = "アンケートしなおし";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // recommend
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.LightYellow;
-            ClientSize = new Size(1858, 1050);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(1749, 668);
+            Controls.Add(button2);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -200,10 +216,8 @@
             Controls.Add(dataGridView2);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "recommend";
             Text = "Form2";
-            WindowState = FormWindowState.Maximized;
             Load += Form2_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
@@ -213,22 +227,23 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.Button button1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private Label label1;
+        private DataGridView dataGridView2;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column10;
+        private Button button1;
         private Label label2;
         private Label label3;
         private Label label4;
+        private Button button2;
     }
 }

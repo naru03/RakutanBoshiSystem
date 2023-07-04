@@ -37,36 +37,39 @@
             // label1
             // 
             label1.Font = new Font("MS UI Gothic", 26F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(813, 90);
+            label1.Location = new Point(516, 9);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(311, 94);
+            label1.Size = new Size(218, 56);
             label1.TabIndex = 0;
             label1.Text = "Raku単くん";
             // 
             // panel1
             // 
-            panel1.Location = new Point(181, 315);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(0, 186);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1525, 676);
+            panel1.Size = new Size(1240, 220);
             panel1.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("MS UI Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(266, 236);
+            label2.Location = new Point(73, 87);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(156, 36);
+            label2.Size = new Size(107, 24);
             label2.TabIndex = 2;
             label2.Text = "アンケート";
             // 
             // button1
             // 
             button1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(1283, 237);
+            button1.Location = new Point(948, 68);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(237, 40);
+            button1.Size = new Size(166, 43);
             button1.TabIndex = 3;
             button1.Text = "読み込み画面に戻る";
             button1.UseVisualStyleBackColor = true;
@@ -74,27 +77,27 @@
             // 
             // question
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightYellow;
-            ClientSize = new Size(1733, 1050);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(1224, 401);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(panel1);
             Controls.Add(label1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2);
             Name = "question";
             Text = "Form1";
-            WindowState = FormWindowState.Maximized;
+            Load += question_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private Label label1;
+        private Panel panel1;
+        private Label label2;
         private Button button1;
     }
 }

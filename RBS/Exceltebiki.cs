@@ -1,10 +1,28 @@
-﻿using ClosedXML.Excel;
+﻿/*******************************************************************
+*** File Name : Exceltebiki.cs
+*** Version : V1.0
+*** Designer : 白石 京馬
+*** Date : 2023.06.26
+*** Purpose : エクセルファイルを読み込み、成績の参照用のdataを配列に格納。
+***
+*******************************************************************/
+/*
+*** Revision :
+*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*/
+
+using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System.IO;
+
 
 namespace RBS
 {
@@ -19,25 +37,21 @@ namespace RBS
 
             XLWorkbook book = new XLWorkbook(fullPath);
             var ws = book.Worksheet(1);
-
-
-            List<string> listA = new List<string>();
-            List<string> listB = new List<string>();
-
+          
             // セルの値を読み取り
             //行数だけ繰り返す
-            for (int row = 0; row < 208; row++)
-            {
-                //列数だけ繰り返す
-                for (int col = 0; col < 22; col++)
+                for (int row = 0; row < 208; row++)
                 {
-                    //文字列型に変換
-                    string value = ws.Cell(row + 2, col + 1).Value.ToString();
-                    Data[row, col] = value;
-                    Console.WriteLine(Data[row, col]);
+                    //列数だけ繰り返す
+                    for (int col = 0; col < 23; col++)
+                    {
+                        //文字列型に変換
+                        string value = ws.Cell(row + 2, col + 1).Value.ToString();
+                        Data[row, col] = value;
+                        Console.WriteLine(Data[row, col]);
 
+                    }
                 }
-            }
         }
     }
 }
