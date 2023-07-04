@@ -336,6 +336,7 @@ namespace RBS
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Name = "recommend";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             Load += Form2_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

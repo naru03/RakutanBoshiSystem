@@ -95,8 +95,8 @@ namespace RBS
 
         private void button2_Click(object sender, EventArgs e)
         {
-    
-            if (textBox1 == null || textBox1.Text.Contains(".htm") == false)
+
+            if (textBox1 == null || textBox1.Text.Contains(".htm") == false && textBox1.Text.Contains(".html") == false)
             {
                 label2.Text = "ファイルがありません！";
             }
@@ -105,19 +105,13 @@ namespace RBS
                 var question = new question();
                 question.Show();
 
-                this.Hide();
+                this.Visible = false;
             }
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var setumei = new setumei();
             setumei.Show();
-
-        }
-
-        private void title_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

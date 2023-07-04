@@ -46,17 +46,17 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(0, 186);
+            panel1.Location = new Point(11, 144);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1240, 220);
+            panel1.Size = new Size(1200, 220);
             panel1.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("MS UI Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(73, 87);
+            label2.Location = new Point(135, 75);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(107, 24);
@@ -66,10 +66,10 @@
             // button1
             // 
             button1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(948, 68);
+            button1.Location = new Point(961, 64);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(166, 43);
+            button1.Size = new Size(190, 50);
             button1.TabIndex = 3;
             button1.Text = "読み込み画面に戻る";
             button1.UseVisualStyleBackColor = true;
@@ -87,8 +87,8 @@
             Controls.Add(label1);
             Margin = new Padding(2);
             Name = "question";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += question_Load;
             ResumeLayout(false);
             PerformLayout();
         }
