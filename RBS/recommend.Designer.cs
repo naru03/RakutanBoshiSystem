@@ -67,6 +67,7 @@ namespace RBS
             dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             label7 = new Label();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -319,12 +320,24 @@ namespace RBS
             label7.TabIndex = 10;
             label7.Text = "label7";
             // 
+            // button2
+            // 
+            button2.Font = new System.Drawing.Font("Yu Gothic UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(352, 564);
+            button2.Name = "button2";
+            button2.Size = new Size(222, 44);
+            button2.TabIndex = 11;
+            button2.Text = "レコメンドしなおし";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // recommend
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1749, 668);
+            Controls.Add(button2);
             Controls.Add(label7);
             Controls.Add(dataGridView3);
             Controls.Add(label6);
@@ -381,5 +394,6 @@ namespace RBS
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private Label label7;
+        private Button button2;
     }
 }

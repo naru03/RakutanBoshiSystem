@@ -66,8 +66,21 @@ namespace RBS
                 Scoremanage.suurisum = 0;
                 Scoremanage.allscore = 0;
                 Scoremanage.jinbunsum = 0;
+                Scoremanage.zengaku = 0;
+                Scoremanage.kyoutuu = 0;
+                Scoremanage.gakkakateigai = 0;
+                Scoremanage.allscore_max = 0;
+                Scoremanage.senmonsum_max = 0;
+                Scoremanage.jinbunsum_max = 0;
+                Scoremanage.gengosum_max = 0;
+                Scoremanage.taikusum_max = 0;
+                Scoremanage. suurisum_max = 0;
+                Scoremanage.zengaku_max = 0;
+                Scoremanage.kyoutuu_max = 0;
+                Scoremanage.gakkakateigai_max = 0;
 
-                var form2 = new recommend();
+
+        var form2 = new recommend();
                 form2.Show();
             }
             else

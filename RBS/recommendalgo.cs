@@ -159,7 +159,19 @@ namespace RBS
                     if (sibori1[i, 0] == null) break;
                     if (int.Parse(sibori1[i, 21]) != -1 && sibori1[i, 0] != "")
                     {
-                        if (int.Parse(sibori1[i, 21]) > 50)
+                        if (sibori1[i, 0] == "専門")
+                        {
+                            if (int.Parse(sibori1[i, 21]) > 30)
+                            {
+                                for (int j = 0; j < 23; j++)
+                                {
+                                    sibori2[index, j] = sibori1[i, j];
+                                }
+                                index++;
+                            }
+
+                        }
+                        else if (int.Parse(sibori1[i, 21]) > 50)
                         {
                             for (int j = 0; j < 23; j++)
                             {
@@ -179,7 +191,19 @@ namespace RBS
                     if (sibori1[i, 0] == null) break;
                     if (int.Parse(sibori1[i, 21]) != -1)
                     {
-                        if (int.Parse(sibori1[i, 21]) < 50 && sibori1[i, 0] != null)
+                        if (sibori1[i, 0] == "専門")
+                        {
+                            if (int.Parse(sibori1[i, 21]) > 30)
+                            {
+                                for (int j = 0; j < 23; j++)
+                                {
+                                    sibori2[index, j] = sibori1[i, j];
+                                }
+                                index++;
+                            }
+
+                        }
+                        else if (int.Parse(sibori1[i, 21]) < 50 && sibori1[i, 0] != null)
                         {
                             for (int j = 0; j < 23; j++)
                             {
@@ -205,7 +229,7 @@ namespace RBS
 
         public void reccomend3(int pattern3)
         {
-            //レポートの評価大
+            //GPA
             int index = 0;
             if (pattern3 == 0)
             {
