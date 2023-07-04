@@ -49,6 +49,15 @@ namespace RBS
         public static int zengaku = 0;
         public static int kyoutuu = 0;
         public static int gakkakateigai = 0;
+        public static int allscore_max = 0;
+        public static int senmonsum_max = 0;
+        public static int jinbunsum_max = 0;
+        public static int gengosum_max = 0;
+        public static int taikusum_max = 0;
+        public static int suurisum_max = 0;
+        public static int zengaku_max= 0;
+        public static int kyoutuu_max = 0;
+        public static int gakkakateigai_max = 0;
 
         public Scoremanage()
         {
@@ -62,6 +71,15 @@ namespace RBS
             //int tcount = 0;
             //int zengaku = 0;
             //int kyoutuu = 0;
+            //int allscore_max = 0;
+            //public static int senmonsum_max = 0;
+            //public static int jinbunsum_max = 0;
+            //public static int gengosum_max = 0;
+            //public static int taikusum_max = 0;
+            //public static int suurisum_max = 0;
+            //public static int zengaku_max = 0;
+            //public static int kyoutuu_max = 0;
+            //public static int gakkakateigai_max = 0;
             for (int i = 0; i < scoresize; i++)
             {
                 if (fileinput.Kamoku[i, 0] == "学科課程外科目")
@@ -71,6 +89,8 @@ namespace RBS
                         gakkakateigai = gakkakateigai + int.Parse(fileinput.Kamoku[i, 4]);
                         allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                     }
+                    gakkakateigai_max = gakkakateigai_max + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore_max = allscore_max + int.Parse(fileinput.Kamoku[i, 4]);
                 }
                 else if (fileinput.Kamoku[i, 0] == "全学共通科目")
                 {
@@ -79,6 +99,8 @@ namespace RBS
                         zengaku = zengaku + int.Parse(fileinput.Kamoku[i, 4]);
                         allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                     }
+                    zengaku_max = zengaku_max + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore_max = allscore_max + int.Parse(fileinput.Kamoku[i, 4]);
                 }
                 else if (fileinput.Kamoku[i, 0] == "専門")
                 {
@@ -87,6 +109,8 @@ namespace RBS
                         senmonsum = senmonsum + int.Parse(fileinput.Kamoku[i, 4]);
                         allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                     }
+                    senmonsum_max = senmonsum_max + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore_max = allscore_max + int.Parse(fileinput.Kamoku[i, 4]);
 
                 }
                 else if (fileinput.Kamoku[i, 0] == "人文社会系教養")
@@ -96,6 +120,8 @@ namespace RBS
                         jinbunsum = jinbunsum + int.Parse(fileinput.Kamoku[i, 4]);
                         allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                     }
+                    jinbunsum_max = jinbunsum_max + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore_max = allscore_max + int.Parse(fileinput.Kamoku[i, 4]);
                 }
                 else if (fileinput.Kamoku[i, 0] == "言語")
                 {
@@ -104,6 +130,8 @@ namespace RBS
                         gengosum = gengosum + int.Parse(fileinput.Kamoku[i, 4]);
                         allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                     }
+                    gengosum_max = gengosum_max + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore_max = allscore_max + int.Parse(fileinput.Kamoku[i, 4]);
                 }
                 else if (fileinput.Kamoku[i, 0] == "体育健康")
                 {
@@ -112,20 +140,29 @@ namespace RBS
                         taikusum = taikusum + int.Parse(fileinput.Kamoku[i, 4]);
                         allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
                     }
+                    taikusum_max = taikusum_max + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore_max = allscore_max + int.Parse(fileinput.Kamoku[i, 4]);
                 }
                 else if (fileinput.Kamoku[i, 0] == "数理基礎")
                 {
-
-                    suurisum = suurisum + int.Parse(fileinput.Kamoku[i, 4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        suurisum = suurisum + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
+                    suurisum_max = suurisum_max + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore_max = allscore_max + int.Parse(fileinput.Kamoku[i, 4]);
                 }
                 else if (fileinput.Kamoku[i, 0] == "工学部共通")
                 {
-
-                    kyoutuu = kyoutuu + int.Parse(fileinput.Kamoku[i, 4]);
-                    allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    if (fileinput.Kamoku[i, 5] == "合格" || fileinput.Kamoku[i, 5] == "認定")
+                    {
+                        kyoutuu = kyoutuu + int.Parse(fileinput.Kamoku[i, 4]);
+                        allscore = allscore + int.Parse(fileinput.Kamoku[i, 4]);
+                    }
+                    kyoutuu_max = kyoutuu_max + int.Parse(fileinput.Kamoku[i, 4]);
+                    allscore_max = allscore_max + int.Parse(fileinput.Kamoku[i, 4]);
                 }
-
             }
 
 

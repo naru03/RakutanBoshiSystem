@@ -52,14 +52,23 @@ namespace RBS
             //reccomendbug();
 
             // 今取った単位数確認
-            dataGridView1.Rows.Add("単位数", Scoremanage.suurisum + "/14", Scoremanage.gengosum + "/10", "*", Scoremanage.jinbunsum + "/6", Scoremanage.taikusum + "/2", Scoremanage.senmonsum + "/70");
+            dataGridView1.Rows.Add("単位数", Scoremanage.suurisum + "/14", Scoremanage.gengosum + "/10", "*",
+                Scoremanage.jinbunsum + "/6", Scoremanage.taikusum + "/2", Scoremanage.senmonsum + "/70",
+                Scoremanage.gakkakateigai, Scoremanage.zengaku, Scoremanage.kyoutuu);
+
+            dataGridView3.Rows.Add("単位数", Scoremanage.suurisum_max + "/14", Scoremanage.gengosum_max + "/10", "*",
+                Scoremanage.jinbunsum_max + "/6", Scoremanage.taikusum_max + "/2", Scoremanage.senmonsum_max + "/70",
+                Scoremanage.gakkakateigai_max, Scoremanage.zengaku_max, Scoremanage.kyoutuu_max);
+
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             //カラム数指定
             dataGridView2.ColumnCount = 3;
 
-            //総取得単位表示
+            //総取得単位表示(取得済み)
             label4.Text = Scoremanage.allscore + "/124";
+
+            label7.Text = Scoremanage.allscore_max + "/124";
 
             //カラム指定
             dataGridView2.Columns[0].HeaderText = "科目区分";
@@ -164,7 +173,24 @@ namespace RBS
             Environment.Exit(0);
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
