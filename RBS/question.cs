@@ -65,5 +65,10 @@ namespace RBS
 
             this.Hide();
         }
+
+        private void question_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

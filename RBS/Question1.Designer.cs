@@ -38,8 +38,8 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(174, 154);
-            radioButton1.Margin = new Padding(2, 2, 2, 2);
+            radioButton1.Location = new Point(200, 30);
+            radioButton1.Margin = new Padding(2);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(333, 37);
             radioButton1.TabIndex = 0;
@@ -51,8 +51,8 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("MS UI Gothic", 22F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(628, 157);
-            radioButton2.Margin = new Padding(2, 2, 2, 2);
+            radioButton2.Location = new Point(646, 30);
+            radioButton2.Margin = new Padding(2);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(372, 34);
             radioButton2.TabIndex = 1;
@@ -63,10 +63,10 @@
             // button1
             // 
             button1.Font = new Font("MS UI Gothic", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(796, 313);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Location = new Point(877, 90);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(141, 83);
+            button1.Size = new Size(141, 50);
             button1.TabIndex = 2;
             button1.Text = "次へ";
             button1.UseVisualStyleBackColor = true;
@@ -92,9 +92,9 @@
             Controls.Add(button1);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Question1";
-            Size = new Size(1240, 440);
+            Size = new Size(1240, 220);
             ResumeLayout(false);
             PerformLayout();
         }

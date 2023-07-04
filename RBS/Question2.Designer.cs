@@ -39,8 +39,8 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(178, 152);
-            radioButton1.Margin = new Padding(2, 2, 2, 2);
+            radioButton1.Location = new Point(135, 30);
+            radioButton1.Margin = new Padding(2);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(434, 37);
             radioButton1.TabIndex = 0;
@@ -52,8 +52,8 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(722, 152);
-            radioButton2.Margin = new Padding(2, 2, 2, 2);
+            radioButton2.Location = new Point(692, 30);
+            radioButton2.Margin = new Padding(2);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(270, 37);
             radioButton2.TabIndex = 1;
@@ -64,10 +64,10 @@
             // button1
             // 
             button1.Font = new Font("MS UI Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(818, 280);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Location = new Point(833, 81);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(129, 76);
+            button1.Size = new Size(129, 48);
             button1.TabIndex = 2;
             button1.Text = "次へ";
             button1.UseVisualStyleBackColor = true;
@@ -87,8 +87,8 @@
             // button2
             // 
             button2.Font = new Font("MS UI Gothic", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(162, 54);
-            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Location = new Point(26, 16);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(85, 37);
             button2.TabIndex = 4;
@@ -106,9 +106,9 @@
             Controls.Add(button1);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Question2";
-            Size = new Size(1240, 440);
+            Size = new Size(1240, 220);
             Load += Question2_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -38,8 +38,8 @@
             // button1
             // 
             button1.Font = new Font("MS UI Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(762, 286);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Location = new Point(766, 83);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(209, 69);
             button1.TabIndex = 0;
@@ -51,8 +51,8 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(216, 171);
-            radioButton1.Margin = new Padding(2, 2, 2, 2);
+            radioButton1.Location = new Point(189, 25);
+            radioButton1.Margin = new Padding(2);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(280, 37);
             radioButton1.TabIndex = 1;
@@ -65,8 +65,8 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(622, 171);
-            radioButton2.Margin = new Padding(2, 2, 2, 2);
+            radioButton2.Location = new Point(687, 25);
+            radioButton2.Margin = new Padding(2);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(288, 37);
             radioButton2.TabIndex = 2;
@@ -88,8 +88,8 @@
             // button2
             // 
             button2.Font = new Font("MS UI Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(182, 53);
-            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Location = new Point(41, 25);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(79, 32);
             button2.TabIndex = 4;
@@ -107,9 +107,9 @@
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(button1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Question3";
-            Size = new Size(1240, 440);
+            Size = new Size(1240, 220);
             Load += Question3_Load;
             ResumeLayout(false);
             PerformLayout();
