@@ -164,7 +164,14 @@ namespace RBS
             Environment.Exit(0);
         }
 
-
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            recommendalgo.sibori1 = new string[208, 23];
+            recommendalgo.sibori2 = new string[208, 23];
+            recommendalgo.sibori3 = new string[208, 23];
+            question.ctr3.Visible = false;
+            question.ctr1.Visible = true;
+            this.Close();
+        }
     }
 }

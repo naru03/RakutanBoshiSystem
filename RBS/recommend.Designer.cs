@@ -51,6 +51,7 @@ namespace RBS
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -60,12 +61,11 @@ namespace RBS
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
-            dataGridView1.Location = new Point(230, 132);
-            dataGridView1.Margin = new Padding(2);
+            dataGridView1.Location = new Point(329, 220);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 27;
-            dataGridView1.Size = new Size(793, 56);
+            dataGridView1.Size = new Size(1133, 93);
             dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -114,10 +114,9 @@ namespace RBS
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(539, 55);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(770, 92);
             label1.Name = "label1";
-            label1.Size = new Size(122, 24);
+            label1.Size = new Size(180, 36);
             label1.TabIndex = 1;
             label1.Text = "Raku単くん";
             // 
@@ -126,12 +125,11 @@ namespace RBS
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column8, Column9, Column10 });
-            dataGridView2.Location = new Point(413, 279);
-            dataGridView2.Margin = new Padding(2);
+            dataGridView2.Location = new Point(590, 465);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.RowTemplate.Height = 27;
-            dataGridView2.Size = new Size(370, 111);
+            dataGridView2.Size = new Size(529, 185);
             dataGridView2.TabIndex = 2;
             // 
             // Column8
@@ -155,10 +153,9 @@ namespace RBS
             // button1
             // 
             button1.Font = new System.Drawing.Font("MS UI Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(929, 220);
-            button1.Margin = new Padding(2);
+            button1.Location = new Point(1327, 367);
             button1.Name = "button1";
-            button1.Size = new Size(94, 47);
+            button1.Size = new Size(134, 78);
             button1.TabIndex = 3;
             button1.Text = "おしまい";
             button1.UseVisualStyleBackColor = true;
@@ -168,10 +165,9 @@ namespace RBS
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(509, 233);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(727, 388);
             label2.Name = "label2";
-            label2.Size = new Size(74, 21);
+            label2.Size = new Size(110, 32);
             label2.TabIndex = 4;
             label2.Text = "総単位数\r\n";
             // 
@@ -179,10 +175,9 @@ namespace RBS
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Yu Gothic UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(230, 229);
-            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Location = new Point(329, 382);
             label3.Name = "label3";
-            label3.Size = new Size(189, 25);
+            label3.Size = new Size(279, 38);
             label3.TabIndex = 5;
             label3.Text = "あなたにおすすめの単位";
             // 
@@ -190,19 +185,30 @@ namespace RBS
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(638, 233);
-            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Location = new Point(911, 388);
             label4.Name = "label4";
-            label4.Size = new Size(54, 21);
+            label4.Size = new Size(80, 32);
             label4.TabIndex = 6;
             label4.Text = "label4";
             // 
+            // button2
+            // 
+            button2.Font = new System.Drawing.Font("Yu Gothic UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(329, 481);
+            button2.Name = "button2";
+            button2.Size = new Size(202, 57);
+            button2.TabIndex = 7;
+            button2.Text = "アンケートしなおし";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // recommend
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1224, 401);
+            ClientSize = new Size(1749, 668);
+            Controls.Add(button2);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -210,7 +216,6 @@ namespace RBS
             Controls.Add(dataGridView2);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
-            Margin = new Padding(2);
             Name = "recommend";
             Text = "Form2";
             Load += Form2_Load_1;
@@ -239,5 +244,6 @@ namespace RBS
         private Label label2;
         private Label label3;
         private Label label4;
+        private Button button2;
     }
 }
