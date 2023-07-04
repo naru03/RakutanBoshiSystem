@@ -38,7 +38,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(200, 30);
+            radioButton1.Location = new Point(150, 70);
             radioButton1.Margin = new Padding(2);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(333, 37);
@@ -51,7 +51,7 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("MS UI Gothic", 22F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(646, 30);
+            radioButton2.Location = new Point(680, 70);
             radioButton2.Margin = new Padding(2);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(372, 34);
@@ -62,11 +62,11 @@
             // 
             // button1
             // 
-            button1.Font = new Font("MS UI Gothic", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(877, 90);
+            button1.Font = new Font("MS UI Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(1000, 120);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(141, 50);
+            button1.Size = new Size(140, 50);
             button1.TabIndex = 2;
             button1.Text = "次へ";
             button1.UseVisualStyleBackColor = true;

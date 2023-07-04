@@ -193,9 +193,9 @@ namespace RBS
             label4.Location = new Point(638, 233);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(54, 21);
+            label4.Size = new Size(35, 21);
             label4.TabIndex = 6;
-            label4.Text = "label4";
+            label4.Text = "0/0";
             // 
             // recommend
             // 
@@ -212,6 +212,7 @@ namespace RBS
             Controls.Add(dataGridView1);
             Margin = new Padding(2);
             Name = "recommend";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             Load += Form2_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

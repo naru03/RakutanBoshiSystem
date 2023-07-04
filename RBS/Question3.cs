@@ -69,8 +69,6 @@ namespace RBS
 
                 var form2 = new recommend();
                 form2.Show();
-
-
             }
             else
             {
@@ -92,11 +90,6 @@ namespace RBS
 
             question.ctr3.Visible = false;
             question.ctr2.Visible = true;
-
-        }
-
-        private void Question3_Load(object sender, EventArgs e)
-        {
 
         }
     }
