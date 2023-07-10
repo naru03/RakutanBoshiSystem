@@ -14,6 +14,7 @@ using System.Runtime.InteropServices;
 using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using RBS;
+using static System.Windows.Forms.DataFormats;
 
 namespace RBS
 {
@@ -200,8 +201,34 @@ namespace RBS
             recommendalgo.sibori3 = new string[208, 23];
             question.ctr3.Visible = false;
             question.ctr1.Visible = true;
+            
+            Scoremanage.graph_suuri1sum = 0;
+            Scoremanage.graph_suuri2sum = 0;
+            Scoremanage.graph_suuri3sum = 0;
+            Scoremanage.graph_suuri4sum = 0;
+            Scoremanage.graph_genngo1sum = 0;
+            Scoremanage.graph_genngo2sum = 0;
+            Scoremanage.graph_genngo3sum = 0;
+            Scoremanage.graph_genngo4sum = 0;
+            Scoremanage.graph_zinnbunn1sum = 0;
+            Scoremanage.graph_zinnbunn2sum = 0;
+            Scoremanage.graph_zinnbunn3sum = 0;
+            Scoremanage.graph_zinnbunn4sum = 0;
+            Scoremanage.graph_taiiku1sum = 0;
+            Scoremanage.graph_taiiku2sum = 0;
+            Scoremanage.graph_taiiku3sum = 0;
+            Scoremanage.graph_taiiku4sum = 0;
+            Scoremanage.graph_sennmonn1sum = 0;
+            Scoremanage.graph_sennmonn2sum = 0;
+            Scoremanage.graph_sennmonn3sum = 0;
+            Scoremanage.graph_sennmonn4sum = 0;
             this.Close();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            graph Graph = new graph();
+            Graph.Show();
         }
     }
 }
