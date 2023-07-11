@@ -76,9 +76,13 @@ namespace RBS
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column11, Column12, Column13 });
+            dataGridView1.Enabled = false;
             dataGridView1.Location = new Point(245, 61);
             dataGridView1.Margin = new Padding(1);
             dataGridView1.Name = "dataGridView1";
@@ -185,7 +189,7 @@ namespace RBS
             dataGridView2.ReadOnly = true;
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.RowTemplate.Height = 27;
-            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dataGridView2.ShowCellToolTips = false;
             dataGridView2.Size = new Size(370, 111);
             dataGridView2.TabIndex = 2;
@@ -269,9 +273,14 @@ namespace RBS
             // 
             // dataGridView3
             // 
+            dataGridView3.AllowUserToAddRows = false;
+            dataGridView3.AllowUserToDeleteRows = false;
+            dataGridView3.AllowUserToResizeColumns = false;
+            dataGridView3.AllowUserToResizeRows = false;
             dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.ColumnHeadersHeight = 32;
             dataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10 });
+            dataGridView3.Enabled = false;
             dataGridView3.Location = new Point(245, 163);
             dataGridView3.Margin = new Padding(1);
             dataGridView3.Name = "dataGridView3";
