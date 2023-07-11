@@ -81,15 +81,16 @@ namespace RBS
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeight = 34;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column11, Column12, Column13 });
             dataGridView1.Enabled = false;
-            dataGridView1.Location = new Point(245, 61);
-            dataGridView1.Margin = new Padding(1);
+            dataGridView1.Location = new Point(350, 102);
+            dataGridView1.Margin = new Padding(1, 2, 1, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 27;
-            dataGridView1.Size = new Size(792, 55);
+            dataGridView1.Size = new Size(1131, 92);
             dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -166,10 +167,10 @@ namespace RBS
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(556, 27);
+            label1.Location = new Point(794, 45);
             label1.Margin = new Padding(1, 0, 1, 0);
             label1.Name = "label1";
-            label1.Size = new Size(122, 24);
+            label1.Size = new Size(180, 36);
             label1.TabIndex = 1;
             label1.Text = "Raku単くん";
             // 
@@ -182,8 +183,8 @@ namespace RBS
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column8, Column9, Column10 });
-            dataGridView2.Location = new Point(430, 251);
-            dataGridView2.Margin = new Padding(1);
+            dataGridView2.Location = new Point(614, 418);
+            dataGridView2.Margin = new Padding(1, 2, 1, 2);
             dataGridView2.MultiSelect = false;
             dataGridView2.Name = "dataGridView2";
             dataGridView2.ReadOnly = true;
@@ -191,7 +192,7 @@ namespace RBS
             dataGridView2.RowTemplate.Height = 27;
             dataGridView2.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dataGridView2.ShowCellToolTips = false;
-            dataGridView2.Size = new Size(370, 111);
+            dataGridView2.Size = new Size(529, 185);
             dataGridView2.TabIndex = 2;
             // 
             // Column8
@@ -218,10 +219,10 @@ namespace RBS
             // button1
             // 
             button1.Font = new System.Drawing.Font("MS UI Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(871, 318);
-            button1.Margin = new Padding(1);
+            button1.Location = new Point(1244, 530);
+            button1.Margin = new Padding(1, 2, 1, 2);
             button1.Name = "button1";
-            button1.Size = new Size(94, 47);
+            button1.Size = new Size(134, 78);
             button1.TabIndex = 3;
             button1.Text = "おしまい";
             button1.UseVisualStyleBackColor = true;
@@ -231,10 +232,10 @@ namespace RBS
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(528, 125);
+            label2.Location = new Point(754, 208);
             label2.Margin = new Padding(1, 0, 1, 0);
             label2.Name = "label2";
-            label2.Size = new Size(147, 21);
+            label2.Size = new Size(220, 32);
             label2.TabIndex = 4;
             label2.Text = "総単位数(取得済み)";
             // 
@@ -242,10 +243,10 @@ namespace RBS
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Yu Gothic UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(195, 279);
+            label3.Location = new Point(279, 465);
             label3.Margin = new Padding(1, 0, 1, 0);
             label3.Name = "label3";
-            label3.Size = new Size(189, 25);
+            label3.Size = new Size(279, 38);
             label3.TabIndex = 5;
             label3.Text = "あなたにおすすめの単位";
             // 
@@ -253,10 +254,10 @@ namespace RBS
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(704, 125);
+            label4.Location = new Point(1006, 208);
             label4.Margin = new Padding(1, 0, 1, 0);
             label4.Name = "label4";
-            label4.Size = new Size(54, 21);
+            label4.Size = new Size(80, 32);
             label4.TabIndex = 6;
             label4.Text = "label4";
             // 
@@ -264,10 +265,10 @@ namespace RBS
             // 
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(528, 228);
+            label6.Location = new Point(754, 380);
             label6.Margin = new Padding(1, 0, 1, 0);
             label6.Name = "label6";
-            label6.Size = new Size(148, 21);
+            label6.Size = new Size(222, 32);
             label6.TabIndex = 8;
             label6.Text = "総単位数(取得予定)";
             // 
@@ -281,13 +282,13 @@ namespace RBS
             dataGridView3.ColumnHeadersHeight = 32;
             dataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10 });
             dataGridView3.Enabled = false;
-            dataGridView3.Location = new Point(245, 163);
-            dataGridView3.Margin = new Padding(1);
+            dataGridView3.Location = new Point(350, 272);
+            dataGridView3.Margin = new Padding(1, 2, 1, 2);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.ReadOnly = true;
             dataGridView3.RowHeadersWidth = 62;
             dataGridView3.RowTemplate.Height = 27;
-            dataGridView3.Size = new Size(792, 55);
+            dataGridView3.Size = new Size(1131, 92);
             dataGridView3.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
@@ -364,20 +365,20 @@ namespace RBS
             // 
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(706, 228);
+            label7.Location = new Point(1009, 380);
             label7.Margin = new Padding(1, 0, 1, 0);
             label7.Name = "label7";
-            label7.Size = new Size(54, 21);
+            label7.Size = new Size(79, 32);
             label7.TabIndex = 10;
             label7.Text = "label7";
             // 
             // button2
             // 
             button2.Font = new System.Drawing.Font("Yu Gothic UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(246, 338);
-            button2.Margin = new Padding(1);
+            button2.Location = new Point(351, 563);
+            button2.Margin = new Padding(1, 2, 1, 2);
             button2.Name = "button2";
-            button2.Size = new Size(155, 26);
+            button2.Size = new Size(221, 43);
             button2.TabIndex = 11;
             button2.Text = "レコメンドしなおし";
             button2.UseVisualStyleBackColor = true;
@@ -386,9 +387,10 @@ namespace RBS
             // button4
             // 
             button4.Font = new System.Drawing.Font("Yu Gothic UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(1525, 291);
+            button4.Location = new Point(1527, 274);
+            button4.Margin = new Padding(4, 5, 4, 5);
             button4.Name = "button4";
-            button4.Size = new Size(193, 61);
+            button4.Size = new Size(194, 90);
             button4.TabIndex = 12;
             button4.Text = "学年別取得単位";
             button4.UseVisualStyleBackColor = true;
@@ -396,10 +398,10 @@ namespace RBS
             // 
             // Recommend
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1224, 401);
+            ClientSize = new Size(1749, 668);
             Controls.Add(button4);
             Controls.Add(button2);
             Controls.Add(label7);
@@ -412,7 +414,7 @@ namespace RBS
             Controls.Add(dataGridView2);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
-            Margin = new Padding(1);
+            Margin = new Padding(1, 2, 1, 2);
             Name = "Recommend";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
