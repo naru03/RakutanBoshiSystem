@@ -1,5 +1,5 @@
 ﻿/*******************************************************************
-*** File Name : Scoremanage.cs
+*** File Name : Score_Manage.cs
 *** Version : V1.1
 *** Designer : 植竹　航也
 *** Date : 2023.07.03
@@ -10,7 +10,7 @@
 *** Revision :
 *** V1.0 : 白石 京馬, 2023.06.26
 *** V1.1 : 植竹 航也, 2023.07.03
-*** V1.2 : 篠塚 勇希, 2023.07.11 Scoremanage
+*** V1.2 : 篠塚 勇希, 2023.07.11 Scor_Manage
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 */
 
@@ -80,6 +80,13 @@ namespace RBS
         public static int graph_sennmonn3sum = 0;
         public static int graph_sennmonn4sum = 0;
 
+        /****************************************************************************
+        *** Constructor  Name : Score_Manage()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : 読み込んだファイルの単位数を計算。
+        *** Return : ×
+        ****************************************************************************/
         public Score_Manage()
         {
             //scoresizeでとった単位数の列を取得

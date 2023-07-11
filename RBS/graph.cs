@@ -1,5 +1,5 @@
 ﻿/*******************************************************************
-*** File Name : graph.cs
+*** File Name : Graph.cs
 *** Version : V1.0
 *** Designer : 篠塚 勇希
 *** Date : 2023.07.11
@@ -19,9 +19,18 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace RBS
 {
-    public partial class graph : Form
+    public partial class Graph : Form
     {
-        public graph()
+
+        /****************************************************************************
+        *** Constructor  Name : Graph()
+        *** Designer : 篠塚 勇希
+        *** Date : 2023.7.11
+        *** Method : 単位数からグラフを表示。
+        *** Return : ×
+        ****************************************************************************/
+
+        public Graph()
         {
             InitializeComponent();
             string[] labels = new string[] { "１年", "２年", "３年", "４年" };
