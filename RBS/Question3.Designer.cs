@@ -75,7 +75,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("MS UI Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.IndianRed;
-            label1.Location = new Point(1116, 627);
+            label1.Location = new Point(1402, 307);
             label1.Name = "label1";
             label1.Size = new Size(0, 28);
             label1.TabIndex = 3;

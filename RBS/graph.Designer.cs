@@ -2,7 +2,7 @@
 
 namespace RBS
 {
-    partial class graph
+    partial class Graph
     {
         /// <summary>
         /// Required designer variable.

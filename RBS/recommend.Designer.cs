@@ -376,10 +376,10 @@ namespace RBS
             // 
             // button4
             // 
-            button4.Location = new Point(948, 267);
-            button4.Margin = new Padding(2);
+            button4.Font = new System.Drawing.Font("Yu Gothic UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Location = new Point(1525, 291);
             button4.Name = "button4";
-            button4.Size = new Size(78, 20);
+            button4.Size = new Size(193, 61);
             button4.TabIndex = 12;
             button4.Text = "学年別取得単位";
             button4.UseVisualStyleBackColor = true;

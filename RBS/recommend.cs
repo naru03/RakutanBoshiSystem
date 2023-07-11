@@ -243,10 +243,16 @@ namespace RBS
             this.Close();
         }
 
-
+        /****************************************************************************
+        *** Method Name : button4_Click()
+        *** Designer : 篠塚　勇希
+        *** Date : 2023.7.11
+        *** Method : 現在の総単位数や取得予定単位数の表示を行う
+        *** Return : ×
+        ****************************************************************************/
         private void button4_Click(object sender, EventArgs e)
         {
-            graph Graph = new graph();
+            Graph Graph = new Graph();
             Graph.Show();
 
         }
