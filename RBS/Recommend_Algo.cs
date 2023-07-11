@@ -1,5 +1,5 @@
 ﻿/*******************************************************************
-*** File Name : recommendalgo.cs
+*** File Name : Recommend_Algo.cs
 *** Version : V1.0
 *** Designer : 白石 京馬
 *** Date : 2023.06.26
@@ -8,7 +8,7 @@
 *******************************************************************/
 /*
 *** Revision :
-*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.0 : 白石 京馬, 2023.06.26
 *** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
@@ -22,7 +22,7 @@ using System.Threading.Tasks;
 
 namespace RBS
 {
-    public partial class recommendalgo
+    public partial class Recommend_Algo
     {
         public static String[,] kirisute = new string[208, 24];
         public static String[,] siborilast = new string[208, 23];
@@ -33,7 +33,15 @@ namespace RBS
         public static String[] tani = new string[5];
         public static String[] kamokukubun = new string[5];
 
-        public recommendalgo()
+        /****************************************************************************
+        *** Constructor  Name : Recommend_Algo()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : アンケート結果から授業を絞る。
+        *** Return : ×
+        ****************************************************************************/
+
+        public Recommend_Algo()
         {
             tannijogai();
             reccomend1(Question1.pattern1);
@@ -52,35 +60,35 @@ namespace RBS
 
         public void tannijogai()
         {
-            String[] kir = new string[100];
-            for (int lk = 0; lk < 100; lk++)
+            //kir 今取った単位の名前
+            String[] kir = new string[200];
+            for (int lk = 0; lk < 200; lk++)
             {
-                kir[lk] = fileinput.Kamoku[lk, 1];
+                kir[lk] = File_Input.Kamoku[lk, 1];
+                if (File_Input.Kamoku[lk, 1] == null) break;
 
             }
 
-            Exceltebiki instance2 = new Exceltebiki();
+            Excel_Tebiki instance2 = new Excel_Tebiki();
             int index = 0;
             for (int k = 0; k < 208; k++)
             {
                 int lm = 0;
-                for (int lk = 0; lk < 100; lk++)
+                for (int lk = 0; lk < 200; lk++)
                 {
-                    if (kir[lk] == Exceltebiki.Data[k, 3])
+                    if (kir[lk] == null) break;
+                    if (kir[lk] == Excel_Tebiki.Data[k, 3])
                     {
                         lm = 1;
+                        break;
                     }
                 }
-                if (lm == 1)
+                if(lm==0)
                 {
-
-                }
-                else
-                {
-                    if (Exceltebiki.Data[k, 0] == "") break;
+                    if (Excel_Tebiki.Data[k, 0] == "") break;
                     for (int j = 0; j < 23; j++)
                     {
-                        kirisute[index, j] = Exceltebiki.Data[k, j];
+                        kirisute[index, j] = Excel_Tebiki.Data[k, j];
                     }
                     index++;
                 }
@@ -91,7 +99,7 @@ namespace RBS
 
 
         /****************************************************************************
-        *** Method Name : tannijogai()
+        *** Method Name : recommend1()
         *** Designer : 白石 京馬
         *** Date : 2023.6.26
         *** Method : 専門科目かそれ以外かで絞り、新しい配列で格納
@@ -100,7 +108,6 @@ namespace RBS
 
         public void reccomend1(int pattern1)
         {
-            Exceltebiki instance2 = new Exceltebiki();
             int index = 0;
             //専門科目絞り
             if (pattern1 == 0)

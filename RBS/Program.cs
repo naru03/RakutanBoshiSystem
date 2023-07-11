@@ -8,7 +8,7 @@
 *******************************************************************/
 /*
 *** Revision :
-*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.0 : 根本 成明, 2023.06.26
 *** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
@@ -22,6 +22,15 @@ namespace RBS
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
+
+        /****************************************************************************
+        *** Method Name : Main()
+        *** Designer : 根本 成明
+         *** Date : 2023.6.26
+        *** Method : アプリケーションの初期化を行い、ファイル読み込み画面から始める。
+        *** Return : ×
+        ****************************************************************************/
+
         static void Main()
         {
             // To customize application configuration such as set high DPI settings or default font,
@@ -29,7 +38,7 @@ namespace RBS
             ApplicationConfiguration.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fileinput());
+            Application.Run(new File_Input());
 
         }
     }

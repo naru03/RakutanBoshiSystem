@@ -1,5 +1,5 @@
 /*******************************************************************
-*** File Name : fileinput.cs
+*** File Name : File_Input.cs
 *** Version : V1.0
 *** Designer : 根本 成明
 *** Date : 2023.06.26
@@ -8,9 +8,9 @@
 *******************************************************************/
 /*
 *** Revision :
-*** V1.0 : 作成者名, yyyy.mm.dd
-*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
-*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.0 : 根本 成明, 2023.06.26
+*** V1.1 : 白石 京馬, 2023.06.30 linkLabel1_LinkClicked
+*** V1.2 : 鵜飼 航希, 2023.07.03 button2_Click
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 */
 
@@ -31,14 +31,30 @@ using static System.Windows.Forms.DataFormats;
 namespace RBS
 {
 
-    public partial class fileinput : Form
+    public partial class File_Input : Form
     {
         public static String[,] Kamoku = new string[100, 11];
 
-        public fileinput()
+        /****************************************************************************
+        *** Constructor  Name : File_Input()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : GUIアプリケーションの初期化処理を行う。
+        *** Return : ×
+        ****************************************************************************/
+
+        public File_Input()
         {
             InitializeComponent();
         }
+
+        /****************************************************************************
+        *** Method Name : Form1_Load()
+        *** Designer : 根本 成明
+        *** Date : 2023.6.26
+        *** Method : 読み込んだhtmlファイルの授業を表示するための表作成
+        *** Return : ×
+        ****************************************************************************/
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -56,6 +72,14 @@ namespace RBS
             dataGridView1.Columns[10].HeaderText = "教員";
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+        /****************************************************************************
+        *** Method Name : button1_Click()
+        *** Designer : 根本 成明
+        *** Date : 2023.6.26
+        *** Method : 読み込むファイルの選択を行い、その授業の情報を配列に格納
+        *** Return : ×
+        ****************************************************************************/
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -92,6 +116,13 @@ namespace RBS
             }
         }
 
+        /****************************************************************************
+        *** Method Name : button2_Click()
+        *** Designer : 鵜飼 航希
+        *** Date : 2023.6.26
+        *** Method : 読み込むファイルの形式が"htm"か"html"メッセージでなければ、エラーメッセージ表示
+        *** Return :　×
+        ****************************************************************************/
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -102,16 +133,25 @@ namespace RBS
             }
             else
             {
-                var question = new question();
-                question.Show();
+                var Question = new Question();
+                Question.Show();
 
                 this.Visible = false;
             }
         }
+
+        /****************************************************************************
+        *** Method Name : linkLabel1_LinkClicked()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : "ファイル作成のやり方"のリンクをクリックすると説明画面表示
+        *** Return :　×
+        ****************************************************************************/
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var setumei = new setumei();
-            setumei.Show();
+            var Setumei = new Setumei();
+            Setumei.Show();
         }
     }
 }

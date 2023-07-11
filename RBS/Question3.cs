@@ -8,7 +8,7 @@
 *******************************************************************/
 /*
 *** Revision :
-*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.0 : 白石 京馬, 2023.06.26
 *** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
@@ -29,18 +29,23 @@ namespace RBS
     public partial class Question3 : UserControl
     {
         public static int pattern3;
+
+       /****************************************************************************
+       *** Constructor  Name : Question3()
+       *** Designer : 白石 京馬
+       *** Date : 2023.6.26
+       *** Method : GUIアプリケーションの初期化処理を行う。
+       *** Return : ×
+       ****************************************************************************/
+
         public Question3()
         {
             InitializeComponent();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         /****************************************************************************
-        *** Method Name : button1_Clicki()
+        *** Method Name : button1_Click()
         *** Designer : 白石 京馬
         *** Date : 2023.6.26
         *** Method : ボタンclick時に次のアンケート画面へ遷移
@@ -60,27 +65,27 @@ namespace RBS
                     pattern3 = 1;
                 }
 
-                Scoremanage.taikusum = 0;
-                Scoremanage.gengosum = 0;
-                Scoremanage.senmonsum = 0;
-                Scoremanage.suurisum = 0;
-                Scoremanage.allscore = 0;
-                Scoremanage.jinbunsum = 0;
-                Scoremanage.zengaku = 0;
-                Scoremanage.kyoutuu = 0;
-                Scoremanage.gakkakateigai = 0;
-                Scoremanage.allscore_max = 0;
-                Scoremanage.senmonsum_max = 0;
-                Scoremanage.jinbunsum_max = 0;
-                Scoremanage.gengosum_max = 0;
-                Scoremanage.taikusum_max = 0;
-                Scoremanage. suurisum_max = 0;
-                Scoremanage.zengaku_max = 0;
-                Scoremanage.kyoutuu_max = 0;
-                Scoremanage.gakkakateigai_max = 0;
+                Score_Manage.taikusum = 0;
+                Score_Manage.gengosum = 0;
+                Score_Manage.senmonsum = 0;
+                Score_Manage.suurisum = 0;
+                Score_Manage.allscore = 0;
+                Score_Manage.jinbunsum = 0;
+                Score_Manage.zengaku = 0;
+                Score_Manage.kyoutuu = 0;
+                Score_Manage.gakkakateigai = 0;
+                Score_Manage.allscore_max = 0;
+                Score_Manage.senmonsum_max = 0;
+                Score_Manage.jinbunsum_max = 0;
+                Score_Manage.gengosum_max = 0;
+                Score_Manage.taikusum_max = 0;
+                Score_Manage.suurisum_max = 0;
+                Score_Manage.zengaku_max = 0;
+                Score_Manage.kyoutuu_max = 0;
+                Score_Manage.gakkakateigai_max = 0;
 
 
-        var form2 = new recommend();
+                var form2 = new Recommend();
                 form2.Show();
             }
             else
@@ -91,9 +96,9 @@ namespace RBS
         }
 
         /****************************************************************************
-        *** Method Name : button1_Clicki()
+        *** Method Name : button2_Click()
         *** Designer : 白石 京馬
-        *** Date : 2023.6.26
+        *** Date : 2023.06.26
         *** Method : ボタンclick時に前のアンケート画面へ遷移
         *** Return : ×
         ****************************************************************************/
@@ -101,8 +106,8 @@ namespace RBS
         private void button2_Click(object sender, EventArgs e)
         {
 
-            question.ctr3.Visible = false;
-            question.ctr2.Visible = true;
+            Question.ctr3.Visible = false;
+            Question.ctr2.Visible = true;
 
         }
     }

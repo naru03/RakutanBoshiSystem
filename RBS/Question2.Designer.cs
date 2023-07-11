@@ -39,10 +39,9 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(150, 70);
-            radioButton1.Margin = new Padding(2);
+            radioButton1.Location = new Point(214, 117);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(434, 37);
+            radioButton1.Size = new Size(646, 52);
             radioButton1.TabIndex = 0;
             radioButton1.TabStop = true;
             radioButton1.Text = "レポートメインの成績評価がいい";
@@ -52,10 +51,9 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("MS UI Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(680, 70);
-            radioButton2.Margin = new Padding(2);
+            radioButton2.Location = new Point(971, 117);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(270, 37);
+            radioButton2.Size = new Size(400, 52);
             radioButton2.TabIndex = 1;
             radioButton2.TabStop = true;
             radioButton2.Text = "テストで勝負したい";
@@ -64,10 +62,9 @@
             // button1
             // 
             button1.Font = new Font("MS UI Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(1000, 120);
-            button1.Margin = new Padding(2);
+            button1.Location = new Point(1429, 200);
             button1.Name = "button1";
-            button1.Size = new Size(140, 50);
+            button1.Size = new Size(200, 83);
             button1.TabIndex = 2;
             button1.Text = "次へ";
             button1.UseVisualStyleBackColor = true;
@@ -78,19 +75,17 @@
             label1.AutoSize = true;
             label1.Font = new Font("MS UI Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.IndianRed;
-            label1.Location = new Point(831, 367);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(1187, 612);
             label1.Name = "label1";
-            label1.Size = new Size(0, 19);
+            label1.Size = new Size(0, 28);
             label1.TabIndex = 3;
             // 
             // button2
             // 
             button2.Font = new Font("MS UI Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(125, 0);
-            button2.Margin = new Padding(2);
+            button2.Location = new Point(179, 0);
             button2.Name = "button2";
-            button2.Size = new Size(90, 40);
+            button2.Size = new Size(129, 67);
             button2.TabIndex = 4;
             button2.Text = "戻る";
             button2.UseVisualStyleBackColor = true;
@@ -98,7 +93,7 @@
             // 
             // Question2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             Controls.Add(button2);
@@ -106,10 +101,8 @@
             Controls.Add(button1);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
-            Margin = new Padding(2);
             Name = "Question2";
-            Size = new Size(1240, 220);
-            Load += Question2_Load;
+            Size = new Size(1771, 367);
             ResumeLayout(false);
             PerformLayout();
         }

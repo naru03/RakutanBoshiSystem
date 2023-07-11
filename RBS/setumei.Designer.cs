@@ -1,6 +1,6 @@
 ﻿namespace RBS
 {
-    partial class setumei
+    partial class Setumei
     {
         /// <summary>
         /// Required designer variable.

@@ -1,5 +1,5 @@
 ﻿/*******************************************************************
-*** File Name : setumei.cs
+*** File Name : Setumei.cs
 *** Version : V1.1
 *** Designer : 植竹 航也
 *** Date : 2023.07.03
@@ -26,9 +26,18 @@ using System.Windows.Forms;
 
 namespace RBS
 {
-    public partial class setumei : Form
+    public partial class Setumei : Form
     {
-        public setumei()
+
+        /****************************************************************************
+        *** Constructor  Name : Setumei()
+        *** Designer : 植竹 航也
+        *** Date : 2023.6.26
+        *** Method : GUIアプリケーションの初期化処理を行う。
+        *** Return : ×
+        ****************************************************************************/
+
+        public Setumei()
         {
             InitializeComponent();
         }

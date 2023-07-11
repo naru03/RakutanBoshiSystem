@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*******************************************************************
+*** File Name : Recommend.cs
+*** Version : V1.0
+*** Designer : 白石 京馬
+*** Date : 2023.06.26
+*** Purpose : レコメンドされた授業、単位数、総単位を画面表示。
+***
+*******************************************************************/
+/*
+*** Revision :
+*** V1.0 : 作成者名, 白石京馬.06.26
+*** V1.1 : 修正者名, 植竹航也.07.04 Form2_load_1
+*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*/
+
+using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,48 +33,42 @@ using RBS;
 
 namespace RBS
 {
-    public partial class recommend : Form
+    public partial class Recommend : Form
     {
+        /****************************************************************************
+        *** Constructor  Name : recommend()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : GUIアプリケーションの初期化処理を行う。
+        *** Return : ×
+        ****************************************************************************/
 
-        public recommend()
+        public Recommend()
         {
             InitializeComponent();
         }
 
-        //レコメンド画面表示
-        //private void Reccomend_Diaplay()
-        //{
-
-        //}
-
-        //レコメンド画面のアルゴリズム
-        //private void Reccomend_Algo()
-        //{
-
-        //}
-
-        //表に授業データやこれまでの単位数を自動で書き込む
-        //private void Reccomec_Data_Input() 
-        //{
-
-        //}
-
-
+        /****************************************************************************
+        *** Method Name : Form2_Load_1()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : 現在の総単位数や取得予定単位数の表示を行う
+        *** Return : ×
+        ****************************************************************************/
 
         private void Form2_Load_1(object sender, EventArgs e)
         {
-            Scoremanage instance = new Scoremanage();
-            recommendalgo instance2 = new recommendalgo();
-            //reccomendbug();
+            Score_Manage instance = new Score_Manage();
+            Recommend_Algo instance2 = new Recommend_Algo();
 
             // 今取った単位数確認
-            dataGridView1.Rows.Add("単位数", Scoremanage.suurisum + "/14", Scoremanage.gengosum + "/10", "*",
-                Scoremanage.jinbunsum + "/6", Scoremanage.taikusum + "/2", Scoremanage.senmonsum + "/70",
-                Scoremanage.gakkakateigai, Scoremanage.zengaku, Scoremanage.kyoutuu);
+            dataGridView1.Rows.Add("単位数", Score_Manage.suurisum + "/14", Score_Manage.gengosum + "/10", "*",
+                Score_Manage.jinbunsum + "/6", Score_Manage.taikusum + "/2", Score_Manage.senmonsum + "/70",
+                Score_Manage.gakkakateigai, Score_Manage.zengaku, Score_Manage.kyoutuu);
 
-            dataGridView3.Rows.Add("単位数", Scoremanage.suurisum_max + "/14", Scoremanage.gengosum_max + "/10", "*",
-                Scoremanage.jinbunsum_max + "/6", Scoremanage.taikusum_max + "/2", Scoremanage.senmonsum_max + "/70",
-                Scoremanage.gakkakateigai_max, Scoremanage.zengaku_max, Scoremanage.kyoutuu_max);
+            dataGridView3.Rows.Add("単位数", Score_Manage.suurisum_max + "/14", Score_Manage.gengosum_max + "/10", "*",
+                Score_Manage.jinbunsum_max + "/6", Score_Manage.taikusum_max + "/2", Score_Manage.senmonsum_max + "/70",
+                Score_Manage.gakkakateigai_max, Score_Manage.zengaku_max, Score_Manage.kyoutuu_max);
 
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
@@ -66,9 +76,9 @@ namespace RBS
             dataGridView2.ColumnCount = 3;
 
             //総取得単位表示(取得済み)
-            label4.Text = Scoremanage.allscore + "/124";
+            label4.Text = Score_Manage.allscore + "/124";
 
-            label7.Text = Scoremanage.allscore_max + "/124";
+            label7.Text = Score_Manage.allscore_max + "/124";
 
             //カラム指定
             dataGridView2.Columns[0].HeaderText = "科目区分";
@@ -84,63 +94,64 @@ namespace RBS
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
 
             //データを追加
-            if (recommendalgo.sibori3[0, 0] == null)
+            if (Recommend_Algo.sibori3[0, 0] == null)
             {
                 dataGridView2.Rows.Add("1.あなたの", "おすすめは", "ありません");
             }
             else
             {
-                dataGridView2.Rows.Add("1. " + recommendalgo.sibori3[0, 0], recommendalgo.sibori3[0, 3], recommendalgo.sibori3[0, 4]);
+                dataGridView2.Rows.Add("1. " + Recommend_Algo.sibori3[0, 0], Recommend_Algo.sibori3[0, 3], Recommend_Algo.sibori3[0, 4]);
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
-                linkCell.Value = recommendalgo.sibori3[0, 22];
+                linkCell.Value = Recommend_Algo.sibori3[0, 22];
                 dataGridView2.Rows[0].Cells["LinkColumn"] = linkCell;
             }
 
-            if (recommendalgo.sibori3[1, 0] == null)
+            if (Recommend_Algo.sibori3[1, 0] == null)
             {
                 dataGridView2.Rows.Add("2.あなたの", "おすすめは", "ありません");
             }
             else
             {
-                dataGridView2.Rows.Add("2. " + recommendalgo.sibori3[1, 0], recommendalgo.sibori3[1, 3], recommendalgo.sibori3[1, 4]);
+                dataGridView2.Rows.Add("2. " + Recommend_Algo.sibori3[1, 0], Recommend_Algo.sibori3[1, 3], Recommend_Algo.sibori3[1, 4]);
                 DataGridViewLinkCell linkCell2 = new DataGridViewLinkCell();
-                linkCell2.Value = recommendalgo.sibori3[1, 22];
+                linkCell2.Value = Recommend_Algo.sibori3[1, 22];
                 dataGridView2.Rows[1].Cells["LinkColumn"] = linkCell2;
             }
 
-            if (recommendalgo.sibori3[2, 0] == null)
+            if (Recommend_Algo.sibori3[2, 0] == null)
             {
                 dataGridView2.Rows.Add("3.あなたの", "おすすめは", "ありません");
             }
             else
             {
-                dataGridView2.Rows.Add("3. " + recommendalgo.sibori3[2, 0], recommendalgo.sibori3[2, 3], recommendalgo.sibori3[2, 4]);
+                dataGridView2.Rows.Add("3. " + Recommend_Algo.sibori3[2, 0], Recommend_Algo.sibori3[2, 3], Recommend_Algo.sibori3[2, 4]);
                 DataGridViewLinkCell linkCell3 = new DataGridViewLinkCell();
-                linkCell3.Value = recommendalgo.sibori3[2, 22];
+                linkCell3.Value = Recommend_Algo.sibori3[2, 22];
                 dataGridView2.Rows[2].Cells["LinkColumn"] = linkCell3;
             }
 
-            if (recommendalgo.sibori3[3, 0] == null)
+            if (Recommend_Algo.sibori3[3, 0] == null)
             {
                 dataGridView2.Rows.Add("4.あなたの", "おすすめは", "ありません");
             }
             else
             {
-                dataGridView2.Rows.Add("4. " + recommendalgo.sibori3[3, 0], recommendalgo.sibori3[3, 3], recommendalgo.sibori3[3, 4]);
-                DataGridViewLinkCell linkCell4 = new DataGridViewLinkCell();
-                linkCell4.Value = recommendalgo.sibori3[3, 22];
-                dataGridView2.Rows[3].Cells["LinkColumn"] = linkCell4;
+                    dataGridView2.Rows.Add("4. " + Recommend_Algo.sibori3[3, 0], Recommend_Algo.sibori3[3, 3], Recommend_Algo.sibori3[3, 4]);
+                    DataGridViewLinkCell linkCell4 = new DataGridViewLinkCell();
+                    linkCell4.Value = Recommend_Algo.sibori3[3, 22];
+                    dataGridView2.Rows[3].Cells["LinkColumn"] = linkCell4;
             }
 
-            if (recommendalgo.sibori3[4, 0] == null)
+
+            if (Recommend_Algo.sibori3[4, 0] == null)
             {
                 dataGridView2.Rows.Add("5.あなたの", "おすすめは", "ありません");
             }
             else
             {
-                dataGridView2.Rows.Add("5. " + recommendalgo.sibori3[4, 0], recommendalgo.sibori3[4, 3], recommendalgo.sibori3[4, 4]);
+                dataGridView2.Rows.Add("5. " + Recommend_Algo.sibori3[4, 0], Recommend_Algo.sibori3[4, 3], Recommend_Algo.sibori3[4, 4]);
                 DataGridViewLinkCell linkCell5 = new DataGridViewLinkCell();
-                linkCell5.Value = recommendalgo.sibori3[4, 22];
+                linkCell5.Value = Recommend_Algo.sibori3[4, 22];
                 dataGridView2.Rows[4].Cells["LinkColumn"] = linkCell5;
             }
 
@@ -152,6 +163,14 @@ namespace RBS
             dataGridView2.RowHeadersVisible = false;
 
         }
+
+        /****************************************************************************
+        *** Method Name : dataGridView2_CellContentClick()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : 提案された授業のリンクをクリックすることで、その授業のシラバスに飛ぶ
+        *** Return : ×
+        ****************************************************************************/
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -168,38 +187,37 @@ namespace RBS
 
         }
 
+
+        /****************************************************************************
+        *** Method Name : button1_Click()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method :「おしまい」ボタンクリックによりすべての画面を閉じる
+        *** Return : ×
+        ****************************************************************************/
+
         private void button1_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+        /****************************************************************************
+        *** Method Name : button2_Click()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : 「レコメンドしなおし」ボタンをクリックすることで、絞った授業の配列を初期化し、アンケートを取り直す
+        *** Return : ×
+        ****************************************************************************/
 
         private void button2_Click(object sender, EventArgs e)
         {
-            recommendalgo.sibori1 = new string[208, 23];
-            recommendalgo.sibori2 = new string[208, 23];
-            recommendalgo.sibori3 = new string[208, 23];
-            question.ctr3.Visible = false;
-            question.ctr1.Visible = true;
+            Recommend_Algo.sibori1 = new string[208, 23];
+            Recommend_Algo.sibori2 = new string[208, 23];
+            Recommend_Algo.sibori3 = new string[208, 23];
+            Question.ctr3.Visible = false;
+            Question.ctr1.Visible = true;
             this.Close();
 
         }
