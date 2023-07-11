@@ -68,7 +68,7 @@ namespace RBS
             dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             label7 = new Label();
             button2 = new Button();
-            button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -79,21 +79,12 @@ namespace RBS
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column11, Column12, Column13 });
-<<<<<<< HEAD
-            dataGridView1.Location = new Point(245, 61);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 27;
-            dataGridView1.Size = new Size(793, 56);
-=======
-            dataGridView1.Location = new Point(280, 81);
+            dataGridView1.Location = new Point(350, 101);
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 27;
-            dataGridView1.Size = new Size(906, 74);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            dataGridView1.Size = new Size(1132, 92);
             dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -160,17 +151,10 @@ namespace RBS
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-<<<<<<< HEAD
-            label1.Location = new Point(556, 27);
+            label1.Location = new Point(795, 45);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(122, 24);
-=======
-            label1.Location = new Point(636, 36);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(151, 30);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            label1.Size = new Size(180, 36);
             label1.TabIndex = 1;
             label1.Text = "Raku単くん";
             // 
@@ -179,22 +163,12 @@ namespace RBS
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column8, Column9, Column10 });
-<<<<<<< HEAD
-            dataGridView2.Location = new Point(447, 279);
-            dataGridView2.Margin = new Padding(2, 2, 2, 2);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 62;
-            dataGridView2.RowTemplate.Height = 27;
-            dataGridView2.ShowCellToolTips = false;
-            dataGridView2.Size = new Size(370, 111);
-=======
-            dataGridView2.Location = new Point(492, 334);
+            dataGridView2.Location = new Point(615, 418);
             dataGridView2.Margin = new Padding(2);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.RowTemplate.Height = 27;
-            dataGridView2.Size = new Size(423, 148);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            dataGridView2.Size = new Size(529, 185);
             dataGridView2.TabIndex = 2;
             // 
             // Column8
@@ -218,17 +192,10 @@ namespace RBS
             // button1
             // 
             button1.Font = new System.Drawing.Font("MS UI Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-<<<<<<< HEAD
-            button1.Location = new Point(871, 318);
-            button1.Margin = new Padding(2, 2, 2, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 47);
-=======
-            button1.Location = new Point(995, 424);
+            button1.Location = new Point(1244, 530);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(107, 62);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            button1.Size = new Size(134, 78);
             button1.TabIndex = 3;
             button1.Text = "おしまい";
             button1.UseVisualStyleBackColor = true;
@@ -238,17 +205,10 @@ namespace RBS
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-<<<<<<< HEAD
-            label2.Location = new Point(528, 125);
+            label2.Location = new Point(755, 208);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(147, 21);
-=======
-            label2.Location = new Point(604, 166);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(184, 28);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            label2.Size = new Size(220, 32);
             label2.TabIndex = 4;
             label2.Text = "総単位数(取得済み)";
             // 
@@ -256,17 +216,10 @@ namespace RBS
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Yu Gothic UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-<<<<<<< HEAD
-            label3.Location = new Point(194, 279);
+            label3.Location = new Point(278, 465);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(189, 25);
-=======
-            label3.Location = new Point(222, 372);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(240, 32);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            label3.Size = new Size(279, 38);
             label3.TabIndex = 5;
             label3.Text = "あなたにおすすめの単位";
             // 
@@ -274,17 +227,10 @@ namespace RBS
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-<<<<<<< HEAD
-            label4.Location = new Point(704, 125);
+            label4.Location = new Point(1006, 208);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(54, 21);
-=======
-            label4.Location = new Point(805, 166);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(67, 28);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            label4.Size = new Size(80, 32);
             label4.TabIndex = 6;
             label4.Text = "label4";
             // 
@@ -292,17 +238,10 @@ namespace RBS
             // 
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-<<<<<<< HEAD
-            label6.Location = new Point(528, 228);
+            label6.Location = new Point(755, 380);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(148, 21);
-=======
-            label6.Location = new Point(604, 304);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(186, 28);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            label6.Size = new Size(222, 32);
             label6.TabIndex = 8;
             label6.Text = "総単位数(取得予定)";
             // 
@@ -311,21 +250,12 @@ namespace RBS
             dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10 });
-<<<<<<< HEAD
-            dataGridView3.Location = new Point(245, 170);
-            dataGridView3.Margin = new Padding(2, 2, 2, 2);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 62;
-            dataGridView3.RowTemplate.Height = 27;
-            dataGridView3.Size = new Size(793, 56);
-=======
-            dataGridView3.Location = new Point(280, 218);
+            dataGridView3.Location = new Point(350, 272);
             dataGridView3.Margin = new Padding(2);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 62;
             dataGridView3.RowTemplate.Height = 27;
-            dataGridView3.Size = new Size(906, 74);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            dataGridView3.Size = new Size(1132, 92);
             dataGridView3.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
@@ -392,63 +322,42 @@ namespace RBS
             // 
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-<<<<<<< HEAD
-            label7.Location = new Point(705, 228);
+            label7.Location = new Point(1008, 380);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(54, 21);
-=======
-            label7.Location = new Point(806, 304);
-            label7.Margin = new Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(66, 28);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            label7.Size = new Size(79, 32);
             label7.TabIndex = 10;
             label7.Text = "label7";
             // 
             // button2
             // 
             button2.Font = new System.Drawing.Font("Yu Gothic UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-<<<<<<< HEAD
-            button2.Location = new Point(246, 338);
-            button2.Margin = new Padding(2, 2, 2, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(155, 26);
-=======
-            button2.Location = new Point(282, 451);
+            button2.Location = new Point(352, 564);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(178, 35);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            button2.Size = new Size(222, 44);
             button2.TabIndex = 11;
             button2.Text = "レコメンドしなおし";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
+            // button4
             // 
-            button3.Location = new Point(1242, 248);
-            button3.Name = "button3";
-            button3.Size = new Size(132, 44);
-            button3.TabIndex = 12;
-            button3.Text = "学年別取得単位";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button4.Location = new Point(1355, 445);
+            button4.Name = "button4";
+            button4.Size = new Size(112, 34);
+            button4.TabIndex = 12;
+            button4.Text = "学年別取得単位";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
-            // recommend
+            // Recommend
             // 
-<<<<<<< HEAD
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1224, 401);
-=======
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
-            ClientSize = new Size(1399, 534);
-            Controls.Add(button3);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
+            ClientSize = new Size(1749, 668);
+            Controls.Add(button4);
             Controls.Add(button2);
             Controls.Add(label7);
             Controls.Add(dataGridView3);
@@ -464,8 +373,7 @@ namespace RBS
             Margin = new Padding(2, 2, 2, 2);
 =======
             Margin = new Padding(2);
->>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
-            Name = "recommend";
+            Name = "Recommend";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             Load += Form2_Load_1;
@@ -513,5 +421,6 @@ namespace RBS
         private Label label7;
         private Button button2;
         private Button button3;
+        private Button button4;
     }
 }

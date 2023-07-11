@@ -137,10 +137,10 @@ namespace RBS
             }
             else
             {
-                    dataGridView2.Rows.Add("4. " + Recommend_Algo.sibori3[3, 0], Recommend_Algo.sibori3[3, 3], Recommend_Algo.sibori3[3, 4]);
-                    DataGridViewLinkCell linkCell4 = new DataGridViewLinkCell();
-                    linkCell4.Value = Recommend_Algo.sibori3[3, 22];
-                    dataGridView2.Rows[3].Cells["LinkColumn"] = linkCell4;
+                dataGridView2.Rows.Add("4. " + Recommend_Algo.sibori3[3, 0], Recommend_Algo.sibori3[3, 3], Recommend_Algo.sibori3[3, 4]);
+                DataGridViewLinkCell linkCell4 = new DataGridViewLinkCell();
+                linkCell4.Value = Recommend_Algo.sibori3[3, 22];
+                dataGridView2.Rows[3].Cells["LinkColumn"] = linkCell4;
             }
 
 
@@ -214,39 +214,41 @@ namespace RBS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            recommendalgo.sibori1 = new string[208, 23];
-            recommendalgo.sibori2 = new string[208, 23];
-            recommendalgo.sibori3 = new string[208, 23];
-            question.ctr3.Visible = false;
-            question.ctr1.Visible = true;
-            
-            Scoremanage.graph_suuri1sum = 0;
-            Scoremanage.graph_suuri2sum = 0;
-            Scoremanage.graph_suuri3sum = 0;
-            Scoremanage.graph_suuri4sum = 0;
-            Scoremanage.graph_genngo1sum = 0;
-            Scoremanage.graph_genngo2sum = 0;
-            Scoremanage.graph_genngo3sum = 0;
-            Scoremanage.graph_genngo4sum = 0;
-            Scoremanage.graph_zinnbunn1sum = 0;
-            Scoremanage.graph_zinnbunn2sum = 0;
-            Scoremanage.graph_zinnbunn3sum = 0;
-            Scoremanage.graph_zinnbunn4sum = 0;
-            Scoremanage.graph_taiiku1sum = 0;
-            Scoremanage.graph_taiiku2sum = 0;
-            Scoremanage.graph_taiiku3sum = 0;
-            Scoremanage.graph_taiiku4sum = 0;
-            Scoremanage.graph_sennmonn1sum = 0;
-            Scoremanage.graph_sennmonn2sum = 0;
-            Scoremanage.graph_sennmonn3sum = 0;
-            Scoremanage.graph_sennmonn4sum = 0;
+            Recommend_Algo.sibori1 = new string[208, 23];
+            Recommend_Algo.sibori2 = new string[208, 23];
+            Recommend_Algo.sibori3 = new string[208, 23];
+            Question.ctr3.Visible = false;
+            Question.ctr1.Visible = true;
+
+            Score_Manage.graph_suuri1sum = 0;
+            Score_Manage.graph_suuri2sum = 0;
+            Score_Manage.graph_suuri3sum = 0;
+            Score_Manage.graph_suuri4sum = 0;
+            Score_Manage.graph_genngo1sum = 0;
+            Score_Manage.graph_genngo2sum = 0;
+            Score_Manage.graph_genngo3sum = 0;
+            Score_Manage.graph_genngo4sum = 0;
+            Score_Manage.graph_zinnbunn1sum = 0;
+            Score_Manage.graph_zinnbunn2sum = 0;
+            Score_Manage.graph_zinnbunn3sum = 0;
+            Score_Manage.graph_zinnbunn4sum = 0;
+            Score_Manage.graph_taiiku1sum = 0;
+            Score_Manage.graph_taiiku2sum = 0;
+            Score_Manage.graph_taiiku3sum = 0;
+            Score_Manage.graph_taiiku4sum = 0;
+            Score_Manage.graph_sennmonn1sum = 0;
+            Score_Manage.graph_sennmonn2sum = 0;
+            Score_Manage.graph_sennmonn3sum = 0;
+            Score_Manage.graph_sennmonn4sum = 0;
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void button4_Click(object sender, EventArgs e)
         {
             graph Graph = new graph();
             Graph.Show();
+
         }
     }
 }

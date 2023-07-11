@@ -25,11 +25,11 @@ namespace RBS
         {
             InitializeComponent();
             string[] labels = new string[] { "１年", "２年", "３年", "４年" };
-            int[] values_suuri = new int[] { Scoremanage.graph_suuri1sum, Scoremanage.graph_suuri2sum, Scoremanage.graph_suuri3sum, Scoremanage.graph_suuri4sum };
-            double[] values_genngo = new double[] { Scoremanage.graph_genngo1sum, Scoremanage.graph_genngo2sum, Scoremanage.graph_genngo3sum, Scoremanage.graph_genngo4sum };
-            double[] values_zinnbunn = new double[] { Scoremanage.graph_zinnbunn1sum, Scoremanage.graph_zinnbunn2sum, Scoremanage.graph_zinnbunn3sum, Scoremanage.graph_zinnbunn4sum };
-            double[] values_taiiku = new double[] { Scoremanage.graph_taiiku1sum, Scoremanage.graph_taiiku2sum, Scoremanage.graph_taiiku3sum, Scoremanage.graph_taiiku4sum };
-            double[] values_sennmonn = new double[] { Scoremanage.graph_sennmonn1sum, Scoremanage.graph_sennmonn2sum, Scoremanage.graph_sennmonn3sum, Scoremanage.graph_sennmonn4sum };
+            int[] values_suuri = new int[] { Score_Manage.graph_suuri1sum, Score_Manage.graph_suuri2sum, Score_Manage.graph_suuri3sum, Score_Manage.graph_suuri4sum };
+            double[] values_genngo = new double[] { Score_Manage.graph_genngo1sum, Score_Manage.graph_genngo2sum, Score_Manage.graph_genngo3sum, Score_Manage.graph_genngo4sum };
+            double[] values_zinnbunn = new double[] { Score_Manage.graph_zinnbunn1sum, Score_Manage.graph_zinnbunn2sum, Score_Manage.graph_zinnbunn3sum, Score_Manage.graph_zinnbunn4sum };
+            double[] values_taiiku = new double[] { Score_Manage.graph_taiiku1sum, Score_Manage.graph_taiiku2sum, Score_Manage.graph_taiiku3sum, Score_Manage.graph_taiiku4sum };
+            double[] values_sennmonn = new double[] { Score_Manage.graph_sennmonn1sum, Score_Manage.graph_sennmonn2sum, Score_Manage.graph_sennmonn3sum, Score_Manage.graph_sennmonn4sum };
             // 数理基礎科目のグラフの種類を指定
             chart1.Series.Clear();
             chart1.Series.Add("取得単位数");
