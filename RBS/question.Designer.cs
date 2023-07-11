@@ -1,6 +1,6 @@
 ﻿namespace RBS
 {
-    partial class question
+    partial class Question
     {
         /// <summary>
         /// 必要なデザイナー変数です。

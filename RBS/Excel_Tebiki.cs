@@ -26,16 +26,27 @@ using System.IO;
 
 namespace RBS
 {
-    public partial class Exceltebiki
+
+    public partial class Excel_Tebiki
     {
         public static String[,] Data = new string[300, 300];
 
-        public Exceltebiki()
+
+        /****************************************************************************
+        *** Constructor  Name : Exceltebiki()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : レポジトリ内のExcelファイルを読み取り、配列に格納する。
+        *** Return : ×
+        ****************************************************************************/
+
+        public Excel_Tebiki()
         {
             const string path = "GPA分布.xlsx";
             string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
 
-            XLWorkbook book = new XLWorkbook(fullPath);
+
+            XLWorkbook book = new XLWorkbook(path);
             var ws = book.Worksheet(1);
           
             // セルの値を読み取り

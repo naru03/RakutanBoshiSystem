@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace RBS
 {
-    partial class recommend
+    partial class Recommend
     {
         /// <summary>
         /// Required designer variable.
@@ -95,7 +95,6 @@ namespace RBS
             dataGridView1.Size = new Size(906, 74);
 >>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
@@ -288,7 +287,6 @@ namespace RBS
 >>>>>>> a9f21b5f6547461dcca1715013d52d7298b1eb88
             label4.TabIndex = 6;
             label4.Text = "label4";
-            label4.Click += label4_Click;
             // 
             // label6
             // 

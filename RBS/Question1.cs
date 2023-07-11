@@ -3,12 +3,12 @@
 *** Version : V1.0
 *** Designer : 白石 京馬
 *** Date : 2023.06.26
-*** Purpose : 一つ目のアンケートを表示する。
+*** Purpose : 1つ目のアンケートを表示する。
 ***
 *******************************************************************/
 /*
 *** Revision :
-*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.0 : 白石 京馬, 2023.06.26
 *** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
@@ -31,6 +31,14 @@ namespace RBS
     public partial class Question1 : UserControl
     {
         public static int pattern1;
+
+        /****************************************************************************
+        *** Constructor  Name : Question1()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : GUIアプリケーションの初期化処理を行う。
+        *** Return : ×
+        ****************************************************************************/
 
         public Question1()
         {
@@ -57,8 +65,8 @@ namespace RBS
                 {
                     pattern1 = 1;
                 }
-                question.ctr1.Visible = false;
-                question.ctr2.Visible = true;
+                Question.ctr1.Visible = false;
+                Question.ctr2.Visible = true;
 
 
             }

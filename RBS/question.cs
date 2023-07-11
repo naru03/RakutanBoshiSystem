@@ -1,5 +1,5 @@
 ﻿/*******************************************************************
-*** File Name : question.cs
+*** File Name : Question.cs
 *** Version : V1.0
 *** Designer : 白石 京馬
 *** Date : 2023.06.26
@@ -8,7 +8,7 @@
 *******************************************************************/
 /*
 *** Revision :
-*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.0 : 白石 京馬, 2023.06.26
 *** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
@@ -27,13 +27,21 @@ using System.Windows.Forms;
 
 namespace RBS
 {
-    public partial class question : Form
+    public partial class Question : Form
     {
         public static Question1 ctr1;
         public static Question2 ctr2;
         public static Question3 ctr3;
 
-        public question()
+        /****************************************************************************
+        *** Constructor  Name : Question()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : UserControlで画面の遷移を行うための設定を行う。
+        *** Return : ×
+        ****************************************************************************/
+
+        public Question()
         {
             InitializeComponent();
 
@@ -52,23 +60,21 @@ namespace RBS
 
 
         /****************************************************************************
-       *** Method Name : button1_Clicki()
-       *** Designer : 白石 京馬
-       *** Date : 2023.6.26
-       *** Method : ボタンclick時に読み込み画面へ遷移
-       *** Return : ×
-       ****************************************************************************/
+        *** Method Name : button1_Click()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : ボタンclick時に読み込み画面へ遷移
+        *** Return : ×
+        ****************************************************************************/
+
         private void button1_Click(object sender, EventArgs e)
         {
-            var fileinput = new fileinput();
+            var fileinput = new File_Input();
             fileinput.Show();
 
             this.Hide();
         }
 
-        public void question_visible()
-        {
-            this.Visible = false;
-        }
+        
     }
 }

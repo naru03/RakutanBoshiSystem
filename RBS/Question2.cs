@@ -3,12 +3,12 @@
 *** Version : V1.0
 *** Designer : 白石 京馬
 *** Date : 2023.06.26
-*** Purpose : 二つ目のアンケートを表示する。
+*** Purpose : 2つ目のアンケートを表示する。
 ***
 *******************************************************************/
 /*
 *** Revision :
-*** V1.0 : 作成者名, yyyy.mm.dd
+*** V1.0 : 白石 京馬, 2023.06.26
 *** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
@@ -29,13 +29,22 @@ namespace RBS
     public partial class Question2 : UserControl
     {
         public static int pattern2;
+
+        /****************************************************************************
+        *** Constructor  Name : Question2()
+        *** Designer : 白石 京馬
+        *** Date : 2023.6.26
+        *** Method : GUIアプリケーションの初期化処理を行う。
+        *** Return : ×
+        ****************************************************************************/
+
         public Question2()
         {
             InitializeComponent();
         }
 
         /****************************************************************************
-        *** Method Name : button1_Clicki()
+        *** Method Name : button1_Click()
         *** Designer : 白石 京馬
         *** Date : 2023.6.26
         *** Method : ボタンclick時に次のアンケート画面へ遷移
@@ -54,8 +63,8 @@ namespace RBS
                 {
                     pattern2 = 1;
                 }
-                question.ctr2.Visible = false;
-                question.ctr3.Visible = true;
+                Question.ctr2.Visible = false;
+                Question.ctr3.Visible = true;
 
 
             }
@@ -76,14 +85,11 @@ namespace RBS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            question.ctr2.Visible = false;
-            question.ctr1.Visible = true;
+            Question.ctr2.Visible = false;
+            Question.ctr1.Visible = true;
 
         }
 
-        private void Question2_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
