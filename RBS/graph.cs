@@ -6,6 +6,13 @@
 *** Purpose : 現在の各系統の取得単位に応じて各学年で取得した単位数をグラフ化する。
 ***
 *******************************************************************/
+/*
+*** Revision :
+*** V1.0 : 篠塚 勇希, 2023.06.26
+*** V1.1 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*/
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

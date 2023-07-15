@@ -1,5 +1,5 @@
 ﻿/*******************************************************************
-*** File Name : Question2.cs
+*** File Name : Question3.cs
 *** Version : V1.0
 *** Designer : 白石 京馬
 *** Date : 2023.06.26
@@ -43,7 +43,7 @@ namespace RBS
             InitializeComponent();
         }
 
-
+        
         /****************************************************************************
         *** Method Name : button1_Click()
         *** Designer : 白石 京馬
@@ -87,6 +87,10 @@ namespace RBS
 
                 var form2 = new Recommend();
                 form2.Show();
+
+                this.ParentForm.Close();
+
+
             }
             else
             {

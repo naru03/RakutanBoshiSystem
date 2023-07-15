@@ -62,9 +62,12 @@ namespace RBS
         {
             //kir 今取った単位の名前
             String[] kir = new string[200];
+            String[] judge= new String[200];
+
             for (int lk = 0; lk < 200; lk++)
             {
                 kir[lk] = File_Input.Kamoku[lk, 1];
+                judge[lk] = File_Input.Kamoku[lk,5];
                 if (File_Input.Kamoku[lk, 1] == null) break;
 
             }
@@ -77,7 +80,7 @@ namespace RBS
                 for (int lk = 0; lk < 200; lk++)
                 {
                     if (kir[lk] == null) break;
-                    if (kir[lk] == Excel_Tebiki.Data[k, 3])
+                    if (kir[lk] == Excel_Tebiki.Data[k, 3]&& (judge[lk]=="合格"|| judge[lk] == "認定"))
                     {
                         lm = 1;
                         break;

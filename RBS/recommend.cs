@@ -1,6 +1,6 @@
 ﻿/*******************************************************************
 *** File Name : Recommend.cs
-*** Version : V1.0
+*** Version : V1.2
 *** Designer : 白石 京馬
 *** Date : 2023.06.26
 *** Purpose : レコメンドされた授業、単位数、総単位を画面表示。
@@ -10,7 +10,7 @@
 *** Revision :
 *** V1.0 : 作成者名, 白石京馬.06.26
 *** V1.1 : 修正者名, 植竹航也.07.04 Form2_load_1
-*** V1.2 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
+*** V1.2 : 修正者名  白石京馬, 2023.07.14 button2_Click
 *** V1.3 : 修正者名, yyyy.mm.dd 改訂モジュール名を書く
 */
 
@@ -36,6 +36,7 @@ namespace RBS
 {
     public partial class Recommend : Form
     {
+
         /****************************************************************************
         *** Constructor  Name : recommend()
         *** Designer : 白石 京馬
@@ -163,6 +164,15 @@ namespace RBS
             //一番左野項目列を削除
             dataGridView2.RowHeadersVisible = false;
 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+
+            dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView3.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+
         }
 
         /****************************************************************************
@@ -214,12 +224,10 @@ namespace RBS
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             Recommend_Algo.sibori1 = new string[208, 23];
             Recommend_Algo.sibori2 = new string[208, 23];
             Recommend_Algo.sibori3 = new string[208, 23];
-            Question.ctr3.Visible = false;
-            Question.ctr1.Visible = true;
-
             Score_Manage.graph_suuri1sum = 0;
             Score_Manage.graph_suuri2sum = 0;
             Score_Manage.graph_suuri3sum = 0;
@@ -240,7 +248,12 @@ namespace RBS
             Score_Manage.graph_sennmonn2sum = 0;
             Score_Manage.graph_sennmonn3sum = 0;
             Score_Manage.graph_sennmonn4sum = 0;
+
+
             this.Close();
+
+            var Question = new Question();
+            Question.Show();
         }
 
         /****************************************************************************
@@ -256,5 +269,6 @@ namespace RBS
             Graph.Show();
 
         }
+
     }
 }

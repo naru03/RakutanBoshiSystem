@@ -30,14 +30,14 @@ using static System.Windows.Forms.DataFormats;
 
 namespace RBS
 {
-
+   
     public partial class File_Input : Form
     {
         public static String[,] Kamoku = new string[100, 11];
 
         /****************************************************************************
         *** Constructor  Name : File_Input()
-        *** Designer : 白石 京馬
+        *** Designer : 根本 成明
         *** Date : 2023.6.26
         *** Method : GUIアプリケーションの初期化処理を行う。
         *** Return : ×
@@ -71,6 +71,7 @@ namespace RBS
             dataGridView1.Columns[9].HeaderText = "期";
             dataGridView1.Columns[10].HeaderText = "教員";
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
         }
 
         /****************************************************************************
@@ -130,6 +131,10 @@ namespace RBS
             if (textBox1 == null || textBox1.Text.Contains(".htm") == false && textBox1.Text.Contains(".html") == false)
             {
                 label2.Text = "ファイルがありません！";
+            }
+            else if (dataGridView1.Rows.Count == 0)
+            {
+                label2.Text = "ファイルが無効です";
             }
             else
             {
