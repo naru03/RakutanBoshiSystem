@@ -71,7 +71,7 @@ namespace RBS
             dataGridView1.Columns[9].HeaderText = "Šú";
             dataGridView1.Columns[10].HeaderText = "‹³ˆõ";
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
         /****************************************************************************

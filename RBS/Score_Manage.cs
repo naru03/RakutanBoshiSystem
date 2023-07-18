@@ -30,15 +30,6 @@ namespace RBS
     public partial class Score_Manage
     {
 
-        //専門科目の配列:s[0]
-        public static string[] s = new string[100];
-        //人文科目の配列:j[0]
-        public static string[] j = new string[100];
-        //言語科目の配列:g[0]
-        public string[] g = new string[100];
-        //体育科目の配列:t[0]
-        public static string[] t = new string[100];
-
         //今までとった単位数
         public static int senmonsum = 0;
         public static int jinbunsum = 0;

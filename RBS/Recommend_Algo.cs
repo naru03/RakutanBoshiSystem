@@ -25,13 +25,10 @@ namespace RBS
     public partial class Recommend_Algo
     {
         public static String[,] kirisute = new string[208, 24];
-        public static String[,] siborilast = new string[208, 23];
         public static String[,] sibori1 = new string[208, 23];
         public static String[,] sibori2 = new string[208, 23];
         public static String[,] sibori3 = new string[208, 23];
-        public static String[] kamoku = new string[5];
-        public static String[] tani = new string[5];
-        public static String[] kamokukubun = new string[5];
+        
 
         /****************************************************************************
         *** Constructor  Name : Recommend_Algo()
@@ -80,7 +77,7 @@ namespace RBS
                 for (int lk = 0; lk < 200; lk++)
                 {
                     if (kir[lk] == null) break;
-                    if (kir[lk] == Excel_Tebiki.Data[k, 3]&& (judge[lk]=="合格"|| judge[lk] == "認定"))
+                    if (kir[lk] == Excel_Tebiki.Data[k, 3]&& (judge[lk]=="合格"|| judge[lk] == "認定" || judge[lk]=="履修中"))
                     {
                         lm = 1;
                         break;
